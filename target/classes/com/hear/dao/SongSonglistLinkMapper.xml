@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.SongSonglistLinkMapper">
+    <!--public boolean insertSong(int Songlistid);-->
+    <insert id="insertSong" parameterType="SongSonglistLink">
+        INSERT INTO song_songlist(songlist_ID,song_ID) VALUES(
+        #{songlist.id,},#{song.id})
+    </insert>
+
+    <!--public List<SongSonglistLink> selectSonglistAndSongByListId(int id);-->
+    <resultMap id="getSonglistAndSongMap" type="SongSonglistLink">
+        <id column="lid" property="id"></id>
+        <collection property="song" javaType="Song">
+            <id column="sid" property="id"></id>
+            <result column="sname" property="name"></result>
+            <result column="duration" property="duration"></result>
+            <result column="url" property="url"></result>
+            <association property="singer" javaType="Singer">
+                <id column="sinid" property="id"></id>
+                <result column="sinname" property="name"></result>
+            </association>
+            <association property="album" javaType="Album">
+                <id column="aid" property="id"></id>
+                <result column="aname" property="name"></result>
+            </association>
+        </collection>
+    </resultMap>
+    <select id="selectSonglistAndSongByListId" resultMap="getSonglistAndSongMap" parameterType="int">
+        SELECT l.id as lid,s.id as sid,s.name as sname,s.duration,s.url,sin.id as sinid,sin.name as sinname,a.id as aid,a.name as aname FROM song_songlist l,song s,singer sin,album a WHERE l.song_ID=s.ID AND s.singer_id=sin.ID AND s.album_id=a.ID AND l.songlist_ID=#{_paramter} ORDER BY s.ID DESC
+    </select>
+    <!--public boolean removeSonglistSongBySonglistId(int songlistId);-->
+    <delete id="removeSonglistSongBySonglistId" parameterType="int">
+        DELETE FROM song_songlist WHERE songlist_ID=#{_paremeter}
+    </delete>
+
+    <!--public boolean removesongBySongIdAndSonglistId(int songlistId,int songId,);-->
+
+    <delete id="removesongBySongIdAndSonglistId" parameterType="int">
+        DELETE FROM song_songlist WHERE  songlist_ID=#{param1} and song_ID=#{param2}
+    </delete>
+
+</mapper>

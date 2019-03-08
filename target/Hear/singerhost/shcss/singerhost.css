@@ -1,0 +1,125 @@
+.main{
+	position: relative;
+	top: 0;
+	left: 180px;
+	width: 980px;
+	min-height: 700px;
+	overflow: hidden;
+}
+.leftpart{
+	background-color: #ffffff;
+	float: left;
+	position: relative;
+	width: 710px;
+	min-height: 900px;
+	border-style: solid;
+	border-width: 0 1px 1px 1px ;
+	border-color: #d3d3d3;
+	overflow: hidden;
+}
+.rightpart{
+	float: right;
+	background-color: #ffffff;
+	position: relative;
+	width: 270px;
+	/*min-height: 900px;*/
+	border-style: solid;
+	border-width: 0 1px 1px 0 ;
+	border-color: #d3d3d3;
+	overflow: hidden;
+}
+.singerinfo{
+	position:relative;
+	width: 640px;
+
+	margin-top: 20px;
+	left: 35px;
+}
+.singername h2{
+	color: #333;
+	font-weight: normal;
+	font-size: 24px;
+	overflow: hidden;
+}
+.singerimg{
+	position: relative;
+	overflow: hidden;
+}
+.simg{
+	position: relative;
+	width: 640px;
+	height: 300px;
+}
+.collectsinger{
+	display: block;
+	position: absolute;
+	bottom: 18px;
+	right: 20px;
+	width: 76px;
+	height: 32px;
+	background-position: 0 -500px;
+	text-decoration: none;
+	color: #333;
+}
+#collectsinger_img{
+	display: block;
+}
+.collectsinger img{
+	border-radius: 5px;
+	display: block!important;
+}
+
+.right-contain{
+	padding: 20px 40px 40px 30px;
+}
+.right-head{
+	position: relative;
+	height: 23px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.right-body{
+	margin-left: -25px;
+	width: 225px;
+}
+.right-body-singerpart{
+	float: left;
+	width: 75px;
+	height: 92px;
+	padding-left: 25px;
+}
+.right-body-singerpart p{
+	margin-top: 7px;
+	text-align: center;
+	width: auto;
+	float: none;
+}
+.right-body-singerpart-img{
+	width: 50px;
+	height: 50px;
+}
+
+.singerpart-singerimg{
+	width: 50px;
+	height: 50px;
+}
+.singerimg-a{
+	width: 50px;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+}
+.songerhost-bottom{
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 100px;
+}

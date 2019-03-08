@@ -1,0 +1,44 @@
+.slide_div {
+		width: 930px;
+		height: 200px;
+	}
+	
+	.slide_img_div {
+		position: relative;
+	}
+	
+	.slide_img_ul {width:930px;height: 200px;overflow: hidden;}
+	
+	.slide_img_ul li img {
+		width: 140px;
+		height: 140px;
+		position:  inherit;
+		left: 0px;
+		top: 0px;
+	}
+	.slide_option {
+		position: inherit;
+		margin-top: -20px;
+		bottom: 0px;
+		width: 100%;
+		background: yellow;
+		opacity: 0.5;
+		text-align: center;
+		display: block;
+		list-style: none;
+	}
+	
+	.check_li {
+		background: red !important;
+		opacity: 1 !important;
+	}
+	
+	.slide_option li {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #f0f0f0;
+		margin: 5px;
+		display: inline-block;
+		cursor: pointer;
+	}

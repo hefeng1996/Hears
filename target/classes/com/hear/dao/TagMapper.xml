@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.TagMapper">
+<resultMap id="tag" type="Tag">
+    <id column="id" property="id"/>
+    <result column="tagname" property="name"/>
+</resultMap>
+    <!--public List<Tag> selectSonglistTagById(int id);//根据ID查询歌单标签信息-->
+    <select id="selectSonglistTagById" resultMap="tag">
+        select  t.id as id,t.name as tagname from songlist_tag as st,tag as t where songlist_id=1 and st.tag_id=t.id
+    </select>
+    <!--public List<Tag> selectAllTag();-->
+
+    <select id="selectAllTag" resultType="Tag">
+        SELECT * FROM tag
+    </select>
+
+</mapper>

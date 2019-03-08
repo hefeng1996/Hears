@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.SongMapper">
+
+    <resultMap id="getSongMap" type="Song">
+        <id column="id" property="id" />
+        <result column="songname" property="name" />
+        <result column="url" property="url"/>
+        <result column="duration" property="duration" />
+        <association property="album" javaType="Album">
+            <result property="img" column="img"/>
+        </association>
+        <association property="singer" javaType="Singer">
+            <id property="id" column="sid"/>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+    <!--public List<Song> newSong();//新歌榜-->
+    <select id="newSong" resultMap="getSongMap">
+        SELECT so.id as id,so.name as songname,so.url as url,so.duration as duration,s.name as name,s.id as sid,a.img as img
+        from Song as so,Singer as s,Album as a
+        where s.id=so.singer_id and so.album_id = a.id
+        order by rand()
+    </select>
+    <!--public List<Song> hotSong();//热歌榜-->
+    <select id="hotSong" resultMap="getSongMap">
+        SELECT so.id as id,so.name as songname,so.url as url,so.duration as duration,s.name as name,s.id as sid,a.img as img
+        from Song as so,Singer as s,Album as a
+        where s.id=so.singer_id and so.album_id = a.id
+        order by rand()
+        --         order by a.date DESC
+
+    </select>
+    <!--public List<Song> mySong();//原创榜-->
+    <select id="mySong" resultMap="getSongMap">
+          SELECT so.id as id,so.name as songname,so.url as url,so.duration as duration,s.name as name,s.id as sid,a.img as img
+         from Song as so,Singer as s,Album as a
+        where s.id=so.singer_id and so.album_id = a.id order by rand()
+    </select>
+
+    <resultMap id="GetSongInfoMap" type="Song">
+        <id column="id" property="id" />
+        <result column="songname" property="name" />
+        <result column="url" property="url" />
+        <result column="lrc" property="lyrics"/>
+        <association property="album" javaType="Album">
+            <result property="img" column="aimg"/>
+        </association>
+        <association property="singer" javaType="Singer">
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+
+    <!-- public Song selectSongById(int id);-->
+    <select id="selectSongById" parameterType="int" resultMap="GetSongInfoMap">
+        SELECT so.id as id,so.name as songname,so.url as url,so.lyrics as lrc,s.name as name,a.img as aimg from Song as so,Singer as s,Album as a
+        where s.id=so.singer_id and so.album_id = a.id and so.id=#{_parameter}
+    </select>
+    <resultMap id="getSongInfoMap" type="Song">
+        <id column="songid" property="id"/>
+        <result column="name" property="name"/>
+        <result column="duration" property="duration"/>
+        <result column="url" property="url"/>
+        <association property="singer" javaType="Singer">
+            <id column="id" property="id"/>
+            <result column="singername" property="name"/>
+        </association>
+        <association property="album" javaType="Album">
+            <id column="id" property="id"/>
+            <result column="albumname" property="name"/>
+        </association>
+    </resultMap>
+    <!--public List<Song> selectSongBySonglistId(int id);//查询歌单里的歌曲-->
+    <select id="selectSongBySonglistId" resultMap="getSongInfoMap" parameterType="int">
+        SELECT song.id as songid,song.name as name,song.duration as duration,song.url,song.singer_id as id,singer.name as singername,song.album_id as id,album.name as albumname from song_songlist as ss,song,album,singer
+        where ss.songlist_id=#{_paramter} and ss.song_id=song.ID and song.album_id=album.id and song.singer_id=singer.ID
+    </select>
+    <resultMap id="getAlbumSongMap" type="Song">
+        <id column="songid" property="id"/>
+        <result column="name" property="name"/>
+        <result column="duration" property="duration"/>
+        <result column="url" property="url"/>
+        <association property="singer" javaType="Singer">
+            <id column="id" property="id"/>
+            <result column="singername" property="name"/>
+        </association>
+
+    </resultMap>
+    <!--public List<Song> selectSongByAlbumId(int id);//查询专辑里所有歌曲-->
+    <select id="selectSongByAlbumId" resultMap="getAlbumSongMap" parameterType="int">
+      SELECT song.id as songid,song.name as name,song.duration as duration,song.url as url,song.singer_id as id,singer.name as singername
+      from album,singer,song where song.singer_id=singer.id and song.album_id = #{_paramter}
+    </select>
+
+    <resultMap id="getSongInfo" type="Song">
+        <id column="songid" property="id"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="duration" property="duration"/>
+        <result column="composer" property="composer"/>
+        <result column="author" property="author"/>
+        <association property="singer" javaType="Singer">
+            <id column="id" property="id"/>
+            <result column="singername" property="name"/>
+        </association>
+        <association property="album" javaType="Album">
+            <id column="albumid" property="id"/>
+            <result column="albumname" property="name"/>
+            <result column="img" property="img"/>
+            <result column="company" property="company"/>
+            <result column="date" property="date"/>
+        </association>
+    </resultMap>
+
+    <!--public Song selectSongById(int id);//通过歌曲id查询歌曲信息(点击播放歌曲)-->
+    <select id="selectSongByIds" parameterType="int" resultMap="getSongInfo">
+        select s.id as songid,s.name as name,s.url as url,s.duration as duration,s.composer as composer,s.author as author,
+        i.id as id,i.name as singername,a.id as albumid,a.name as  albumname,a.img as img,a.company as company,a.date as date
+        from song as s,album as a,singer as i
+        where s.singer_id = i.id and s.album_id=a.id and s.id=#{_parameter}
+    </select>
+</mapper>

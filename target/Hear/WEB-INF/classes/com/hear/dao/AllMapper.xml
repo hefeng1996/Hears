@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.AllMapper">
+
+
+<!--查歌-->
+ <!--   public List<Song> getSongsByName(String songname);-->
+
+    <select id="getSongsByName" resultMap="SongMap" parameterType="String">
+        select so.id as so_id,so.url as so_url,so.name as so_name,so.duration as so_duration,so.singer_id as s_id,s.name as s_name,so.album_id as a_id,a.name as a_name from song as so,singer AS s,album as a
+
+        <where>
+            1 = 1 and so.singer_id=s.id and so.album_id=a.id
+            <if test="_parameter neq null">
+                and so.name like "%" #{_parameter} "%"
+            </if>
+
+        </where>
+
+    </select>
+
+    <resultMap id="SongMap" type="Song">
+        <id column="so_id" property="id" />
+        <result column="so_name" property="name"></result>
+        <result column="so_duration" property="duration"></result>
+        <result column="so_url" property="url"></result>
+
+
+        <association property="singer" javaType="Singer">
+            <id column="s_id" property="id"></id>
+            <result column="s_name" property="name"></result>
+        </association>
+        <association property="album" javaType="Album">
+            <id column="a_id" property="id"></id>
+            <result column="a_name" property="name"></result>
+        </association>
+
+    </resultMap>
+    <!--查歌手-->
+    <!--public List<Singer> getSingers(String singername);-->
+    <select id="getSingersByName" resultType="Singer" parameterType="String">
+        select * FROM singer as s
+
+        <where>
+            1 = 1
+
+            <if test="_parameter neq null">
+                and s.name like "%" #{_parameter} "%"
+            </if>
+
+        </where>
+
+    </select>
+
+<!--查专辑-->
+    <!--public List<Album> getAlbums(String albumname);-->
+    <select id="getAlbumsByName" resultMap="AlbumMap" parameterType="String">
+        select a.ID as a_id,a.name as a_name,a.img as a_img,a.singer_id as s_id,s.name as s_name
+        from album as a,singer as s
+
+        <where>
+            1 = 1 and a.singer_id = s.ID
+
+            <if test="_parameter neq null">
+                and a.name like "%" #{_parameter} "%"
+            </if>
+
+        </where>
+
+    </select>
+    <resultMap id="AlbumMap" type="Album">
+
+        <id column="a_id" property="id"></id>
+        <result column="a_name" property="name"/>
+        <result column="a_img" property="img"/>
+        <association property="singer" javaType="Singer">
+            <id column="s_id" property="id"></id>
+            <result column="s_name" property="name"></result>
+        </association>
+
+    </resultMap>
+<!--查歌单-->
+    <!--public List<Songlist> getSonglistsByName(String songlistname);-->
+    <select id="getSonglistsByName" resultMap="SonglistMap" parameterType="String">
+        select u.name as u_name,u.id as u_id,sl.id as sl_id,sl.img as sl_img,sl.name as sl_name from songlist as sl,user as u
+
+        <where>
+            1 = 1 and sl.status=0 and sl.user_id=u.id
+
+            <if test="_parameter neq null">
+                and sl.name like "%" #{_parameter} "%"
+            </if>
+
+        </where>
+
+    </select>
+
+    <resultMap id="SonglistMap" type="Songlist">
+
+        <id column="sl_id" property="id"></id>
+        <result column="sl_name" property="name"/>
+        <result column="sl_img" property="img"/>
+        <association property="user" javaType="User">
+            <id column="u_id" property="id"></id>
+            <result column="u_name" property="name"></result>
+        </association>
+
+    </resultMap>
+
+
+<!--歌单里歌曲数量-->
+    <!--public int getSongNumBySonglistId(int songlistId);-->
+    <select id="getSongNumBySonglistId" resultType="int" parameterType="int">
+        select count(*) FROM song_songlist as ss where ss.songlist_id=#{_parameter}
+
+    </select>
+    <!--歌单被收藏的次数-->
+    <!--public int getCollectionNumBySonglistId(int songlistId);-->
+    <select id="getCollectionNumBySonglistId" resultType="int" parameterType="int">
+        select count(*) from song_songlist as ss where ss.songlist_id=#{_parameter}
+
+
+    </select>
+
+    <!--查用户-->
+    <!--public List<User> getUsers(String username);-->
+    <select id="getUsersByName" resultType="User" parameterType="String">
+        select * FROM user as u
+
+        <where>
+            1 = 1
+
+            <if test="_parameter neq null">
+                and u.name like "%" #{_parameter} "%"
+            </if>
+
+        </where>
+
+    </select>
+
+<!--查用户的歌单数量-->
+    <!--public int getSonglistNumByUserId(int userId);-->
+    <select id="getSonglistNumByUserId" resultType="int" parameterType="int">
+        SELECT count(*) from songlist  as sl where sl.user_ID =#{_parameter}
+    </select>
+<!--查用户的粉丝数-->
+    <!--public int getfansByUserId(int userId);;-->
+    <select id="getfansByUserId" resultType="int" parameterType="int">
+        SELECT count(*) from relation  as r where r.userby_ID =#{_parameter}
+    </select>
+
+
+</mapper>

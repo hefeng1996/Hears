@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.MySingerMapper">
+    <!--public List<MySingerMapper> selectMySingerByUserId(int id);-->
+
+    <resultMap id="getMySingerMap" type="MySinger">
+        <id column="mid" property="id"></id>
+        <association property="singer" javaType="Singer">
+            <id column="sid" property="id"></id>
+            <result column="sname" property="name"></result>
+            <result column="img" property="img"></result>
+        </association>
+    </resultMap>
+
+   <select id="selectMySingerByUserId" parameterType="int" resultMap="getMySingerMap">
+       SELECT m.id as mid,s.id as sid,s.name as sname,s.img FROM user_singer m, singer s
+       WHERE m.singer_id=s.ID AND  user_id=#{_paramter}
+   </select>
+
+    <!--public boolean collectSinger(MySinger mySinger);-->
+    <insert id="collectSinger" parameterType="MySinger">
+        INSERT INTO user_singer(user_id,singer_ID) VALUES(
+        #{user.id,},#{singer.id})
+    </insert>
+    <!--public boolean cancelCollectSinger(MySinger mySinger);-->
+    <delete id="cancelCollectSinger" parameterType="MySinger">
+        DELETE FROM user_singer WHERE user_id=#{user.id} and singer_id=#{singer.id}
+    </delete>
+</mapper>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.SonglistMapper">
+    <resultMap id="getSonglistUserMap" type="Songlist">
+        <id column="songlistid" property="id"></id>
+        <result column="name" property="name"/>
+        <result column="img" property="img"/>
+        <result column="introduce" property="introduce"/>
+        <result column="createtime" property="createtime"/>
+        <association property="user" javaType="User">
+            <id column="userID" property="id"></id>
+            <result column="username" property="name"/>
+            <result column="userimg" property="img"/>
+        </association>
+    </resultMap>
+    <!--public Songlist selectSonglistById(int id);//根据ID查询歌单信息-->
+
+    <select id="selectSonglistById" resultMap="getSonglistUserMap" parameterType="int">
+        SELECT s.id as songlistid,s.name as name,s.img as img,s.introduce as introduce,s.createtime as createtime,s.user_ID as userID,u.name as username,u.img as userimg
+         from songlist as s,user as u where s.id=#{_parameter} and u.id=s.user_id
+    </select>
+    <!--public List<Songlist> selectSonglistByUserId(int id);-->
+    <select id="selectSonglistByUserId" resultType="Songlist" parameterType="int">
+        SELECT ID,name,img,createtime,introduce FROM songlist where user_ID=#{_parameter} and status='0' order BY id DESC
+    </select>
+
+    <!--public List<Songlist> selectSonglistlikeByUserId(int id);-->
+    <select id="selectSonglistlikeByUserId" resultMap="getSonglistUserMap" parameterType="int">
+        SELECT us.id as userID,us.name as username,us.img as userimg,s.ID as songlistid,s.name as name,s.img as img,s.createtime as createtime,s.introduce as introduce
+FROM songlist as s,user_songlist as u,user as us
+where us.id=s.user_id and u.user_ID=#{_parameter} and s.id=u.songlist_id
+order BY s.id DESC
+ </select>
+
+
+    <!--public boolean insertSonglist(Songlist songlist);-->
+    <insert id="insertSonglist" parameterType="Songlist">
+        INSERT into songlist (user_id,createtime,name,img,introduce,status) VALUES (#{userId},#{createtime},#{name},#{img},#{introduce},0);
+    </insert>
+
+    <!--public Songlist selectSonglistByCondition(Songlist songlist);-->
+    <select id="selectSonglistByCondition" parameterType="Songlist" resultType="Songlist">
+        SELECT ID FROM songlist WHERE user_ID=#{userId} and createtime=#{createtime} and name=#{name} AND img=#{img} AND introduce=#{introduce} AND status=0;
+    </select>
+
+    <!--public boolean removesonglistBySonglistId(int songlistId);-->
+    <delete id="removesonglistBySonglistId" parameterType="int">
+        DELETE FROM songlist WHERE  ID=#{_parameter}
+    </delete>
+
+
+    <resultMap id="getSonglistMap" type="Songlist">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"/>
+        <result column="img" property="img"/>
+    </resultMap>
+    <!--public List<Songlist> showSonglist();//查看歌单信息-->
+    <select id="showSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist limit 0,20
+    </select>
+    <!--public List<Songlist> chinaSonglist();//查看华语歌单-->
+    <select id="chinaSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+          SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='华语'))
+    </select>
+    <!--public List<Songlist> rageSonglist();//查看流行歌单-->
+    <select id="rageSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+          SELECT songlist_id from songlist_tag WHERE tag_id = (SELECT id from tag where name='流行'))
+    </select>
+    <!--public List<Songlist> ancientSonglist();//查看古风歌单-->
+    <select id="ancientSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='古风'))
+    </select>
+    <!--public List<Songlist> nationSonglist();//民谣歌单-->
+    <select id="nationSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='民谣'))
+    </select>
+    <!--public List<Songlist> morningSonglist();//清晨歌单-->
+    <select id="morningSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='清晨'))
+    </select>
+    <!--public List<Songlist> usaSonglist();//欧美歌单-->
+    <select id="usaSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='欧美'))
+    </select>
+    <!--public List<Songlist> rhSonglist();//日韩歌单-->
+    <select id="rhSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='日韩'))
+    </select>
+    <!--public List<Songlist> rockSonglist();//摇滚歌单-->
+    <select id="rockSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='摇滚'))
+    </select>
+    <!--public List<Songlist> softSonglist();//轻音乐歌单-->
+    <select id="softSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='轻音乐'))
+    </select>
+    <!--public List<Songlist> nightSonglist();//夜晚歌单-->
+    <select id="nightSonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='夜晚'))
+    </select>
+    <!--public List<Songlist> studySonglist();//学习歌单-->
+    <select id="studySonglist" resultMap="getSonglistMap">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='学习'))
+    </select>
+    <!--public List<Songlist> workSonglist();//工作歌单-->
+    <select id="workSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='工作'))
+    </select>
+    <!--public List<Songlist> restSonglist();//午休歌单-->
+    <select id="restSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='午休'))
+    </select>
+    <!--public List<Songlist> teaSonglist();//下午茶歌单-->
+    <select id="teaSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='下午茶'))
+    </select>
+    <!--public List<Songlist> exceSonglist();//运动歌单-->
+    <select id="exceSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='运动'))
+    </select>
+    <!--public List<Songlist> walkSonglist();//散步歌单-->
+    <select id="walkSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='散步'))
+    </select>
+    <!--public List<Songlist> blurSonglist();//酒吧歌单-->
+    <select id="blurSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='酒吧'))
+    </select>
+    <!--public List<Songlist> oldSonglist();//怀旧歌单-->
+    <select id="oldSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='怀旧'))
+    </select>
+    <!--public List<Songlist> freshSonglist();//清新歌单-->
+    <select id="freshSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='清新'))
+    </select>
+    <!--public List<Songlist> slienceSonglist();//安静歌单-->
+    <select id="slienceSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='安静'))
+    </select>
+    <!--public List<Songlist> sadSonglist();//伤感歌单-->
+    <select id="sadSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='伤感'))
+    </select>
+    <!--public List<Songlist> cureSonglist();//治愈歌单-->
+    <select id="cureSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='治愈'))
+    </select>
+    <!--public List<Songlist> missSonglist();//思念歌单-->
+    <select id="missSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='思念'))
+    </select>
+    <!--public List<Songlist> romnSonglist();//浪漫歌单-->
+    <select id="romnSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='浪漫'))
+    </select>
+    <!--public List<Songlist> eiSonglist();//80后歌单-->
+    <select id="eiSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='80后'))
+    </select>
+    <!--public List<Songlist> niSonglist();//90后歌单-->
+    <select id="niSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='90后'))
+    </select>
+    <!--public List<Songlist> zeSonglist();//00后歌单-->
+    <select id="zeSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='00后'))
+    </select>
+    <!--public List<Songlist> typSonglist();//经典歌单-->
+    <select id="typSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='经典'))
+    </select>
+    <!--public List<Songlist> siSonglist();//翻唱歌单-->
+    <select id="siSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='翻唱'))
+    </select>
+    <!--public List<Songlist> geSonglist();//吉他歌单-->
+    <select id="geSonglist" resultType="Songlist">
+        SELECT id,img,name from songlist WHERE id in (
+        SELECT songlist_id from songlist_tag WHERE tag_id =  (SELECT id from tag where name='吉他'))
+    </select>
+
+    <!--public List<Songlist> selectSonglistByUserId(int id);-->
+
+    <!--public boolean newSonglist(Songlist songlist);-->
+    <insert id="newSonglist" parameterType="Songlist">
+        INSERT INTO Songlist(user_ID,createtime,name,img,introduce,status) VALUES
+        (#{user.id},#{createtime},#{name},#{img},#{introduce},#{status})
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <!--SELECT s.ID,s.name,s.img,count(*)FROM songlist as s,song_songlist as ss where user_ID=1 and ss.songlist_id=s.id and status='0'-->
+</mapper>

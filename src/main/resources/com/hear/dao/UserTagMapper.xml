@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.UserTagMapper">
+    <!--public boolean insertUserTag(int tagId,int userId);-->
+    <insert id="insertUserTag" parameterType="int">
+        INSERT INTO user_tag (userID,tag_ID) VALUES (#{param1},#{param2})
+    </insert>
+
+    <!--public boolean removeUserTag(int tagId,int userId);-->
+    <delete id="removeUserTag" parameterType="int">
+        DELETE FROM user_tag WHERE userID=#{_parameter}
+    </delete>
+
+    <!--public List<UserTag> selectTagByUserId(int userId);-->
+    <select id="selectTagByUserId" resultType="UserTag" parameterType="int">
+        SELECT * FROM user_tag WHERE userID=#{_parameter}
+    </select>
+
+</mapper>

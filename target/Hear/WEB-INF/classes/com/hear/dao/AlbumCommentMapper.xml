@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.AlbumCommentMapper">
+    <!--根据歌曲id查所有评论-->
+    <select id="selectCommentsByAlbumId" resultMap="commentsMap" parameterType="int">
+        SELECT u.id as u_id,u.img as u_img,u.name as u_name,c.id as c_id,c.content as c_content,c.time as c_time
+        from user AS u,comments AS c
+        WHERE u.id=c.user_id  AND c.album_id=#{_parameter} ORDER BY c.time DESC
+    </select>
+
+    <resultMap id="commentsMap" type="Comments">
+        <id column="c_id" property="id"/>
+        <result column="c_content" property="content"/>
+        <result column="c_time" property="time"/>
+        <association property="user2" javaType="User">
+            <id column="u_id" property="id"/>
+            <result column="u_img" property="img"/>
+            <result column="u_name" property="name"/>
+        </association>
+
+    </resultMap>
+    <!--根据评论查上一级评论-->
+    <select id="selectUpperCommentByComentId" resultMap="commentsMap" parameterType="int">
+        SELECT u.id as u_id,u.img as u_img,u.name as u_name,c.id as c_id,c.content as c_content,c.time as c_time
+        from user AS u,comments AS c WHERE c.user_id=u.id and c.id=(SELECT c.upperid from comments as c WHERE c.id=#{__parameter})
+
+    </select>
+    <!--根据评论id删除评论-->
+    <delete id="deleteCommentByCommnetId" parameterType="int">
+        DELETE FROM comments where id=#{_parameter}
+    </delete>
+    <!--为歌曲添加评论-->
+    <insert id="insertAlbumComment" parameterType="Comments">
+        INSERT INTO comments(content,user_id,time,album_id) VALUES(#{content},#{user2.id},#{time},#{albumid})
+    </insert>
+    <!--回复歌曲的评论-->
+    <insert id="insertAlbumAnswer" parameterType="Comments">
+        INSERT INTO comments(upperid,content,user_id,time,album_id) VALUES(#{upperComment.id},#{content},#{user2.id},#{time},#{albumid})
+    </insert>
+</mapper>

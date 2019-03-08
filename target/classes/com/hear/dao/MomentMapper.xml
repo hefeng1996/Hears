@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.MomentMapper">
+    <!--public List<Moment> selectMomentCountByUserId(int id);-->
+    <select id="selectMomentsByUserId"  resultType="Moment" parameterType="int">
+        SELECT id FROM moment WHERE user_id=#{_paramter}
+    </select>
+
+    <!--查询自己和关注的好友的全部动态 selectAllMomentsByMyId-->
+    <select id="selectAllMomentsByMyId" resultMap="momentsMap" parameterType="int">
+        SELECT m.id as m_id,m.img as m_img,m.user_id as m_user_id,m.time as m_time,m.text as m_text,u.img as u_img,u.name as u_name,so.id as so_id,so.name as so_name,a.img as a_img,s.name as s_name,s.id as s_id
+        FROM moment AS m,user AS u,singer AS s,song AS so,album AS a
+        WHERE m.user_id=u.id AND m.song_id = so.id AND a.id=so.album_id AND s.id=so.singer_id AND (m.user_id =#{_parameter} OR
+        m.user_id IN (
+        select r.userBy_id FROM relation as r where r.user_id=#{_parameter}
+        )) ORDER BY m.time desc
+
+
+    </select>
+    <resultMap id="momentsMap" type="Moment">
+        <id column="m_id" property="id"/>
+        <result column="m_time" property="time"/>
+        <result column="m_text" property="text"/>
+        <result column="m_img" property="img"/>
+
+        <association property="user" javaType="User">
+            <id column="m_user_id" property="id"/>
+            <result column="u_img" property="img"/>
+            <result column="u_name" property="name"/>
+        </association>
+
+        <association property="song" javaType="Song">
+            <id column="so_id" property="id"/>
+            <result column="so_name" property="name"/>
+            <association property="album" javaType="Album">
+                <result column="a_img" property="img"/>
+            </association>
+            <association property="singer" javaType="Singer">
+                <id column="s_id" property="id"/>
+                <result column="s_name" property="name"/>
+            </association>
+        </association>
+    </resultMap>
+    <!--查询自己的全部动态 selectMyMomentsByMyId-->
+    <select id="selectMyMomentsByMyId" resultMap="momentsMap" parameterType="int">
+        SELECT m.id as m_id,m.img as m_img,m.user_id as m_user_id,m.time as m_time,m.text as m_text,u.img as u_img,u.name as u_name,so.id as so_id,so.name as so_name,a.img as a_img,s.name as s_name,s.id as s_id
+        FROM moment AS m,user AS u,singer AS s,song AS so,album AS a
+        WHERE m.user_id=u.id AND m.song_id = so.id AND a.id=so.album_id AND s.id=so.singer_id AND m.user_id =#{_parameter}  ORDER BY m.time desc
+
+    </select>
+
+
+
+
+    <!--根据动态id查所有评论-->
+    <select id="selectCommentsByMonentId" resultMap="commentsMap" parameterType="int">
+        SELECT u.id as u_id,u.img as u_img,u.name as u_name,c.id as c_id,c.content as c_content,c.time as c_time
+        from user AS u,comments AS c,moment as m
+        WHERE u.id=c.user_id  AND m.ID=c.moment_id and m.id=#{_parameter} ORDER BY c.time desc
+
+    </select>
+
+
+    <resultMap id="commentsMap" type="Comments">
+        <id column="c_id" property="id"/>
+        <result column="c_content" property="content"/>
+        <result column="c_time" property="time"/>
+        <association property="user2" javaType="User">
+            <id column="u_id" property="id"/>
+            <result column="u_img" property="img"/>
+            <result column="u_name" property="name"/>
+        </association>
+
+    </resultMap>
+    <!--根据评论查上一级评论-->
+    <select id="selectUpperCommentByComentId" resultMap="commentsMap" parameterType="int">
+        SELECT u.id as u_id,u.img as u_img,u.name as u_name,c.id as c_id,c.content as c_content,c.time as c_time
+        from user AS u,comments AS c WHERE c.user_id=u.id and c.id=(SELECT c.upperid from comments as c WHERE c.id=#{__parameter})
+
+    </select>
+
+    <!--插入动态-->
+    <insert id="insertMoment" parameterType="Moment">
+        INSERT INTO moment(user_id,song_id,text,time,img) VALUES(
+        #{user.id},#{song.id},#{text},#{time},#{img})
+    </insert>
+    <!--   根据动态的id删除下面所有评论
+        public boolean deleteComentByMomentId(int cId);-->
+    <delete id="deleteComentByMomentId" parameterType="int">
+        delete from comments where moment_id=#{_parameter}
+    </delete>
+    <!--   根据动态的id只删除动态，不删除评论
+        public boolean deleteMomentByMomentId(int cId);-->
+    <delete id="deleteMomentByMomentId" parameterType="int">
+        delete from moment  where id=#{_parameter}
+    </delete>
+
+    <!--根据评论id删除评论-->
+    <delete id="deleteCommentByCommnetId" parameterType="int">
+        DELETE FROM comments where id=#{_parameter}
+    </delete>
+
+    <!--为动态添加评论-->
+    <insert id="insertComment" parameterType="Comments">
+        INSERT INTO comments(content,user_id,time,moment_id) VALUES(#{content},#{user2.id},#{time},#{momentid})
+    </insert>
+
+
+    <!--回复动态的评论-->
+    <insert id="insertAnswer" parameterType="Comments">
+        INSERT INTO comments(upperid,content,user_id,time,moment_id) VALUES(#{upperComment.id},#{content},#{user2.id},#{time},#{momentid})
+    </insert>
+
+</mapper>

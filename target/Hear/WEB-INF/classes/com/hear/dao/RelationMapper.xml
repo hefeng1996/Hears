@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.RelationMapper">
+
+    <!--public List<Relation> selectRelationByUserId13(int id);-->
+    <!--public List<Relation> selectRelationByUserId23(int id);-->
+    <select id="selectRelationByUserId13" resultType="relation" parameterType="int">
+      SELECT * FROM relation where user_id=#{_paramter} AND ( status=3 OR status=1 );
+    </select>
+    <select id="selectRelationByUserId23" resultType="relation" parameterType="int">
+        SELECT * FROM relation where user_id=#{_paramter} AND( status=3 OR status=2 );
+    </select>
+    <!--public boolean removeRelationById(int id);
+    public boolean addRelatonById(int userId,int userById);-->
+    <insert id="addRelatonById" parameterType="int">
+        INSERT into relation (user_id,userBy_id,status) VALUES (#{param1},#{param2},1)
+    </insert>
+    <!--public List<Relation> selectRelationByAll(int userId,int userById);-->
+    <select id="selectRelationByAll" parameterType="int" resultType="Relation">
+        SELECT * FROM relation where user_id=#{param1} AND userBy_id=#{param2};
+    </select>
+    <!--public boolean removeRelation(int userId);-->
+    <delete id="removeRelation" parameterType="int">
+        DELETE FROM relation WHERE user_id=#{param1} and userBy_id=#{param2}
+    </delete>
+
+
+    <resultMap id="fansMap" type="Relation">
+        <id column="id" property="id"></id>
+        <result column="status" property="status"></result>
+        <association property="userbyId" javaType="User">
+            <id column="uid" property="id"></id>
+            <result column="name" property="name"></result>
+            <result column="sex" property="sex"></result>
+            <result column="img" property="img"></result>
+            <result column="introduce" property="introduce"></result>
+        </association>
+    </resultMap>
+    <!--public List<Relation> selectFansByUserId23(int id);-->
+
+    <select id="selectFansByUserId23" resultMap="fansMap" parameterType="int">
+      SELECT r.status,r.id,u.id AS uid,u.name,u.sex,u.img,u.introduce FROM user u,relation r WHERE r.userBy_id=u.id and r.user_id=#{_parameter} AND( status=3 OR status=2 )
+    </select>
+
+    <!--public boolean updateAttention(int userid,int id);-->
+    <update id="updateAttention" parameterType="int">
+        UPDATE relation set status='3' WHERE user_id=#{param1} and userBy_id=#{param2}
+    </update>
+    <!--public boolean updateAttentionByuserbyid(int userbyid,int id);-->
+    <update id="updateAttentionByuserbyid" parameterType="int">
+        UPDATE relation set status='3' WHERE user_id=#{param2} and userBy_id=#{param1}
+    </update>
+
+
+    <!--public List<Relation> selectAttentionByUserId13(int id);-->
+    <select id="selectAttentionByUserId13" resultMap="fansMap" parameterType="int">
+        SELECT r.status,r.id,u.id AS uid,u.name,u.sex,u.img,u.introduce FROM user u,relation r WHERE r.userBy_id=u.id and r.user_id=#{_parameter} AND( status=3 OR status=1 )
+    </select>
+
+    <!--public boolean updateremoveAttention(int userid,int id);-->
+    <delete id="updateremoveAttention" parameterType="int">
+        DELETE FROM relation WHERE user_id=#{param1} and userBy_id=#{param2}
+    </delete>
+
+    <!--public boolean updateremoveAttentionByuserbyid(int userbyid,int id);-->
+    <update id="updateremoveAttentionByuserbyid" parameterType="int">
+        UPDATE relation set status='1' user_id=#{param2} and userBy_id=#{param1}
+    </update>
+</mapper>

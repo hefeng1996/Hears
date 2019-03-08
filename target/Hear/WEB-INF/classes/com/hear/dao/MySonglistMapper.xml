@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.MySonglistMapper">
+    <resultMap id="getMySonglistMap" type="MySonglist">
+        <id column="id" property="id"/>
+        <association property="songlist" javaType="Songlist">
+            <id column="sid" property="id"></id>
+            <result column="name" property="name"/>
+            <result column="img" property="img"/>
+        </association>
+    </resultMap>
+    <!--public List<MySonglist> selectMySonglistByUserId(int id);//查看用户收藏的歌单-->
+    <select id="selectMySonglistByUserId" resultMap="getMySonglistMap" parameterType="int">
+        select u.id as id,u.songlist_id as sid,s.name as name,s.img as img
+        from user_songlist as u,songlist as s where u.songlist_id=s.id AND u.user_id=#{_paramter}
+    </select>
+    <!--public boolean saveSonglist(MySonglist mySonglist);//收藏歌单-->
+    <insert id="saveSonglist" parameterType="MySonglist">
+        INSERT into user_songlist(user_id,songlist_id) values(#{user.id},#{songlist.id})
+    </insert>
+    <!--public boolean cancelSaveSonglist(MySonglist mySonglist);//取消收藏-->
+    <delete id="cancelSaveSonglist" parameterType="MySonglist">
+        delete from user_songlist where user_id=#{user.id} and songlist_id=#{songlist.id}
+    </delete>
+    <!--public boolean removeSaveSonglist(int songListId);//删除收藏-->
+    <delete id="removeSaveSonglist" parameterType="int">
+        DELETE FROM user_songlist where songlist_id=#{_parameter}
+    </delete>
+</mapper>

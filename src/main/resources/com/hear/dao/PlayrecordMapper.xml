@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.PlayrecordMapper">
+
+    <resultMap id="getSingerMap" type="Singer">
+        <id column="singerid" property="id"></id>
+        <result column="sinname" property="name"></result>
+    </resultMap>
+    <resultMap id="getSongMap" type="Song">
+        <id column="sid" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="url" property="url"></result>
+        <result column="duration" property="duration"></result>
+      <association property="singer" javaType="Singer" resultMap="getSingerMap"></association>
+    </resultMap>
+    <resultMap id="getPlayrecordMap" type="Playrecord">
+        <id column="pid" property="id"></id>
+        <result column="playtime" property="playtime"></result>
+        <collection property="song" javaType="Song" resultMap="getSongMap"></collection>
+    </resultMap>
+    <!--public List<Playrecord> selectPlayreCord5(int id);-->
+    <select id="selectPlayreCord5" resultMap="getPlayrecordMap" parameterType="int">
+        SELECT p.ID as pid,p.playtime ,s.ID as sid,s.name,s.url,s.duration,sin.ID as singerid,sin.name AS sinname FROM playrecord p ,song s,singer sin WHERE p.song_id=s.ID and s.singer_id=sin.ID and user_id=#{_paramter} order by  playtime desc LIMIT 0,5
+    </select>
+
+    <!--public List<Playrecord> selectPlayreCord20(int id);-->
+    <select id="selectPlayreCord20" resultMap="getPlayrecordMap" parameterType="int">
+        SELECT p.ID as pid,p.playtime,s.ID as sid,s.name,s.url,s.duration,sin.ID as singerid,sin.name AS sinname FROM playrecord p ,song s,singer sin WHERE p.song_id=s.ID and s.singer_id=sin.ID and user_id=#{_paramter} order by  playtime desc LIMIT 0,20
+    </select>
+
+    <!--public List<Playrecord> selectPlayreCordAll(int id);-->
+    <select id="selectPlayreCordAll" resultMap="getPlayrecordMap" parameterType="int">
+        SELECT p.ID as pid,p.playtime,s.ID as sid,s.name,s.url,s.duration,sin.ID as singerid,sin.name AS sinname FROM playrecord p ,song s,singer sin WHERE p.song_id=s.ID and s.singer_id=sin.ID and user_id=#{_paramter} order by  playtime desc
+    </select>
+
+
+
+
+
+    <!--public int selectPlayreCordCount(int id);-->
+    <select id="selectPlayreCordCount"  resultType="int" parameterType="int">
+        SELECT count(*) FROM playrecord WHERE user_id=#{_paramter}
+    </select>
+</mapper>
+

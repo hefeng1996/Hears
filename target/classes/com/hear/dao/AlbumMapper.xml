@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.AlbumMapper">
+<resultMap id="getAlbumByIdMap" type="album">
+    <id column="id" property="id"></id>
+    <result column="name" property="name" />
+    <result column="company" property="company" />
+    <result column="date" property="date" />
+    <result column="img" property="img" />
+    <association property="singer" javaType="Singer">
+        <id column="singerid" property="id"></id>
+        <result column="singername" property="name"/>
+    </association>
+</resultMap>
+
+    <!--public Album selectAlbumById(int id);//根据专辑id查询专辑信息-->
+    <select id="selectAlbumById" resultMap="getAlbumByIdMap" parameterType="int">
+        select a.id as id,a.name as name,a.img as img,a.date as date ,a.company as company,s.id as singerid,s.name as singername
+        from album as a,singer as s  WHERE a.id=#{_paramter} and s.id=a.singer_id
+    </select>
+    <resultMap id="GetAlbumMap" type="Album">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="company" property="company" />
+        <result column="date" property="date" />
+        <result column="img" property="img" />
+    </resultMap>
+    <!--public List<Album> selectAlbumsBySingerId(int id);-->
+    <select id="selectAlbumsBySingerId" parameterType="int" resultMap="GetAlbumMap">
+        SELECT * FROM album WHERE ID in (
+SELECT DISTINCT album_id FROM song WHERE singer_id=#{_paramter})
+    </select>
+    <!--//查询所有专辑，按时间升序排列-->
+    <!--public List<Album> selectAlbum();-->
+    <select id="selectAlbum" resultMap="GetAlbumMap">
+        select * FROM album order by date DESC
+    </select>
+
+    <select id="selectAlbumBySingerId" resultType="Album" parameterType="int">
+        SELECT * FROM Album WHERE singer_id=#{_paramter}
+    </select>
+</mapper>

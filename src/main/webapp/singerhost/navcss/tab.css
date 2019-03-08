@@ -1,0 +1,403 @@
+﻿.aui-nav-content-box {
+    width: 650px;
+    position: relative;
+	margin:0 auto;
+    left: 6px;
+}
+
+.aui-nav-list-box {
+    overflow: hidden;
+    zoom: 1; border-bottom: none;
+    z-index: 110;
+    background: #fff;
+    width: 640px;
+    display: block;
+    border-top: solid 1px #d1d1d1;
+    border-left: solid 1px #d1d1d1;
+    top: 0;
+}
+
+.aui-nav-list-box ul li a {
+    color: #000;
+}
+
+.aui-nav-list-box ul li {
+    float: left;
+    color: #000;
+    height: 45px;
+    cursor: pointer;
+    line-height: 45px;
+    width: 213px;
+    text-align: center;
+    font-size: 14px;
+    border-right: solid 1px #d1d1d1;
+    border-bottom: solid 2px #d1d1d1;
+}
+
+.aui-nav-list-box ul .aui-current {
+    color: #f54343;
+    background: #f7f7f7;
+    border-bottom: solid 2px #f54144;
+    font-weight: bold;
+}
+
+.aui-nav-list-box ul .aui-current a {
+    color: #f54343;
+}
+
+.aui-page-list {
+    width: 640px;
+    height: 102px;
+    padding-top: 12px;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.aui-page-img {
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-right: 24px;
+    overflow: hidden;
+}
+
+.aui-page-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.aui-page-text {
+    float: left;
+    width: 460px;
+    height: 100px;
+    position: relative;
+}
+
+.aui-nav-list-item {
+    display: none;
+}
+
+.aui-page-text h2 {
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.aui-page-text h2 a {
+    color: #004276;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+
+.aui-page-text h2 a:hover {
+    color: #f54144;
+    text-decoration: underline;
+}
+
+.aui-page-text p {
+    font-size: 14px;
+    color: #999;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 100%;
+}
+
+.aui-page-text p em {
+    font-style: normal;
+}
+
+.aui-comment {
+    background: url("../Images/icon-pl.png") no-repeat repeat;
+    background-size: 20px;
+    padding-left: 25px;
+    float: right;
+}
+
+.aui-comment-box {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.aui-banner-right {
+    width: 430px;
+    height: 282px;
+    background: #ddd;
+    float: right;
+}
+
+.aui-banner-right-ovr {
+    width: 430px;
+    height: 282px;
+    background: #ddd;
+    float: right;
+}
+/*歌曲列表选项卡*/
+.btncontainer{
+
+    width: 640px;
+    height: 33px;
+    margin: 10px 0;
+}
+.btncon{
+    width: 96px;
+    height: 32px;
+    float: left;
+    position: relative;
+}
+.playbtn{
+    width: 65px;
+    height:30px;
+    background-color: #2273c2;
+    border-radius:5px 0 0 5px;
+    float: left;
+    border-right: solid #276097;
+    border-width: 1px;
+    padding:7px 8px 7px 8px;
+    color:#ffffff;
+    font-size: 12px;
+}
+
+.imgplaybg{
+    width: 65px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border-radius:5px 0 0 5px;
+    position: absolute;
+    background: #000;
+    opacity:0.15;filter:brightness(30%)
+}
+.imgplaybg:hover{
+    opacity:0;filter:brightness(100%)
+}
+.imgcolbg{
+    width: 31px;
+    height: 30px;
+    top: 0;
+    left: 65px;
+    border-radius:0 3px 3px 0;
+    position: absolute;
+    background: #000;
+    opacity:0.15;filter:brightness(30%)
+}
+.imgcolbg:hover{
+    opacity:0;filter:brightness(100%)
+}
+.collectbtn{
+    width: 31px;
+    height:30px;
+    float: right;
+    background-color: #2273c2;
+    border-radius:0 3px 3px 0;
+    text-align: center;
+    padding:8px;
+
+}
+.playbtn-img{
+    width: 18px;
+    height: 18px;
+    margin-bottom: 1px;
+}
+.collectbtn-img{
+    width:13px;
+    height:13px;
+    margin-bottom: 5px;
+}
+
+.btn-hotcon{
+    position: relative;
+    width:95px;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid #c3c3c3;
+    left: 100px;
+}
+.collectionbtn{
+    position: absolute;
+    left: 0;
+    padding:5px 6px 5px 6px;
+    color: #2a282b;
+}
+.colbtn-img{
+    width: 16px;
+    height: 18px;
+    margin-bottom: 4px;
+}
+.imgcollectbg{
+    width: 95px;
+    height: 30px;
+    top: 0;
+    left: 0px;
+    border-radius:5px;
+    position: absolute;
+    background: #000;
+    opacity:0.15;filter:brightness(30%)
+}
+.imgcollectbg:hover{
+    opacity:0;filter:brightness(100%)
+}
+/*table样式*/
+.tablelist{
+    width: 640px;
+    min-height: 300px;
+    background-color: #ffffff;
+    font-size: 12px;
+    color: #333;
+}
+.tab{
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    border: none;
+    width: 100%;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td th{
+    display: table-cell;
+    vertical-align: inherit;
+}
+table td{
+    padding: 6px 10px;
+    line-height: 18px;
+    text-align: left;
+}
+table .w1{
+    width: 74px;
+    font-size: 12px;
+    color: #333;
+}
+
+table .ply {
+    float:right;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background-position: 0 -103px;
+}
+td a{
+    color:#333;
+}
+td .plyimg{
+    width: 18px;
+    height: 18px;
+}
+
+.tt{
+    float: left;
+    width: 100%;
+    margin-right: 20px;
+}
+.txt{
+    position: relative;
+    display: inline-block;
+    margin-right: -25px;
+    max-width: 99%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#songtxt{
+    padding-right: 25px;
+    padding: 1px 0;
+}
+.txt a{
+    font-size: 12px;
+    color: #333;
+}
+.w3{
+    position: relative;
+    width: 69px;
+    color: #666;
+    font-size: 12px;
+}
+.songtime{
+    position: relative;
+    top: 2px;
+}
+.songtimebg{
+    position: absolute;
+    padding: 7px 0;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.w4{
+    width: 20%;
+    font-size: 12px;
+    position: relative
+}
+.albumtxt{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 2px;
+}
+/*专辑选项卡内容*/
+.albumcontainer{
+    width: 658px;
+    min-height: 300px;
+    background-color: #ffffff;
+    font-size: 12px;
+    color: #333;
+    margin:20px 0 0 -18px;
+    position:relative;
+}
+.singerhost-albumcontain{
+    width: 163px;
+    height:195px;
+    float: left;
+    padding-left: 18px;
+}`
+.ablumimgcon{
+    height: 120px;
+    width: 145px;
+
+}
+.albumimg{
+    height: 120px;
+    width: 120px;
+}
+.album-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0 3px;
+    font-size: 14px;
+}
+.introduce-head{
+    margin-top: 30px;
+}
+.introduce-head h2{
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333333;
+}
+.introduce-body p{
+    line-height: 25px;
+    color: #666;
+    text-indent: 2em;
+    font-size: 12px;
+}

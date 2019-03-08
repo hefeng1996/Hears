@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hear.dao.UserMapper">
+
+    <!--public User selectUserByName(String username);/*通过用户名查询用户*/-->
+    <select id="selectUserByName" resultType="User" parameterType="string">
+        SELECT * FROM USER WHERE name=#{_parameter}
+    </select>
+
+    <!--public boolean insertUser(User user);/*新用户注册*/-->
+    <insert id="insertUser" parameterType="User">
+        insert INTO USER  (name,password,tel,registtime,sex,nicheng,birthday,province,city,img,isvip,vipdate,introduce) VALUES (#{name},#{password},#{tel},#{registtime},null ,null,null,null,null,null,null,null,null)
+    </insert>
+
+    <!--public boolean updateMessage(User user);/*修改用户信息*/-->
+    <update id="updateMessage" parameterType="User">
+      UPDATE USER set nicheng=#{nicheng},introduce=#{introduce},img=#{img},tel=#{tel},sex=#{sex},birthday=#{birthday},province=#{province},city=#{city} WHERE name=#{name}
+    </update>
+
+    <!--public boolean updatePassword(User user);//修改密码-->
+    <update id="updatePassword" parameterType="User">
+        UPDATE USER set password=#{password} WHERE id=#{id}
+    </update>
+
+    <!--public User selectUserById(int id);-->
+    <select id="selectUserById" resultType="User" parameterType="int">
+        SELECT * FROM USER WHERE id=#{_parameter}
+    </select>
+
+
+    <!--public User selectUserByName(String uname);-->
+    <!--<select id="selectUserByName" resultType="User" parameterType="String">-->
+    <!--SELECT * FROM USER WHERE username=#{_parameter}-->
+    <!--</select>-->
+</mapper>
