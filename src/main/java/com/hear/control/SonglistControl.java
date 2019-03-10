@@ -37,7 +37,7 @@ public class SonglistControl {
     private MySonglistService mySonglistService;
     @Autowired
     private SonglistCommentService songlistCommentService;
-    @RequestMapping(value = "index.action")
+    @RequestMapping(value = "/index.action")
     public void searchSonglist(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setAttribute("hotSong",songService.hotSong());
@@ -53,7 +53,7 @@ public class SonglistControl {
         request.setAttribute("nationSonglist",songlistService.nationSonglist());
         request.setAttribute("ancientSonglist",songlistService.ancientSonglist());
         request.setAttribute("morningSonglist",songlistService.morningSonglist());
-        request.getRequestDispatcher("/main/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/index.jsp").forward(request,response);
     }
     @RequestMapping(value = "hear.action")
     public void hear(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -204,7 +204,7 @@ public class SonglistControl {
            request.setAttribute("tag",tag);
        }
 
-        request.getRequestDispatcher("/main/huayu.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/huayu.jsp").forward(request,response);
 
     }
     @RequestMapping(value = "songlist.action")
@@ -240,7 +240,7 @@ public class SonglistControl {
         request.setAttribute("tag", tagService.selectSonglistTagById(id));
         request.setAttribute("song",songService.selectSongBySonglistId(id));
 
-        request.getRequestDispatcher("/main/songlist.jsp?id="+id).forward(request,response);
+        request.getRequestDispatcher("/mainJsp/songlist.jsp?id="+id).forward(request,response);
     }
 
     @RequestMapping(value = "colsonglist.action")

@@ -56,7 +56,8 @@ public class SongControl {
         request.setAttribute("mySong",songService.mySong());
 
 
-        request.getRequestDispatcher("/main/bangdan.jsp").forward(request,response);
+//        request.getRequestDispatcher("/main/bangdan.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/bangdan.jsp").forward(request,response);
     }
     @RequestMapping(value = "song.action")
     public void selectSong(HttpSession session,HttpServletRequest request, HttpServletResponse response,int id) throws ServletException, IOException {
@@ -75,7 +76,7 @@ public class SongControl {
 
         request.setAttribute("song",songService.selectSongByIds(id));
 
-        request.getRequestDispatcher("/main/song.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/song.jsp").forward(request,response);
     }
 
     @RequestMapping(value = "addsongcomment.action")
