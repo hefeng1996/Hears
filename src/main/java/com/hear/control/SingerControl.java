@@ -42,7 +42,8 @@ public class SingerControl {
         request.setAttribute("jkmaleslist",singerService.selectJkMaleSinger());
         request.setAttribute("jkfemaleslist",singerService.selectJkFemaleSinger());
         request.setAttribute("jkbandslist",singerService.selectJkBand());
-        request.getRequestDispatcher("/singerlist/singerlist.jsp").forward(request,response);
+//        request.getRequestDispatcher("/singerlist/singerlist.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/singerlist.jsp").forward(request,response);
     }
 
     @RequestMapping(value="singerhost.action")

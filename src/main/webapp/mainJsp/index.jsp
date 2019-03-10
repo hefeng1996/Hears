@@ -78,7 +78,7 @@
         .songtimebg{
             display: none;
             position: relative;
-            left:160px;
+            float: right;
             width: 60px;
         }
     </style>
@@ -247,8 +247,8 @@
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
                                 <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -259,8 +259,8 @@
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
                                 <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -280,8 +280,8 @@
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
                                 <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -291,8 +291,8 @@
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
                                 <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -312,8 +312,8 @@
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
                                 <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -322,9 +322,8 @@
                             <td class="td"  style="color: black;">${s.count}</td>
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
-                                <div class="songtimebg" id="songtimebg">
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
-                                    <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
+                                    <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
@@ -346,13 +345,13 @@
 
 <script>
     var $songtimebg = $(".songtimebg");
-    var $songtime = $(".songtime");
+    // var $songtime = $(".songtime");
     $(".tab2 tr").mouseover(function () {
         $(this).find($songtimebg).show();
-        $(this).find($songtime).hide();
+        // $(this).find($songtime).hide();
     }).mouseout(function () {
         $(this).find($songtimebg).hide();
-        $(this).find($songtime).show();
+        // $(this).find($songtime).show();
     })
 </script>
 </body>

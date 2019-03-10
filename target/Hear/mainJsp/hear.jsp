@@ -20,7 +20,13 @@
 <head>
     <meta charset="UTF-8">
     <title>MPlayer音乐播放器</title>
-    <link rel="stylesheet" href="css/mplayer.css">
+    <%--<link rel="stylesheet" href="css/mplayer.css">--%>
+    <link rel="stylesheet" href="<%=basePath%>mainCss/mplayer.css">
+    <link rel="stylesheet" href="<%=basePath%>mainCss/component.css" type="text/css" media="all"/>
+    <!--公共样式-->
+    <link rel="stylesheet" href="<%=basePath%>mainCss/style.css" />
+    <link rel="stylesheet" href="<%=basePath%>mainCss/demo.css"/>
+    <link href="<%=basePath%>mainCss/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <style>
         .info {
             font-family: "Microsoft Yahei";
@@ -28,6 +34,25 @@
         }
         .info h1 {
             font-weight: 400;
+        }
+        html { overflow: hidden; }
+        .menu__item_current {
+            border: 2px solid #d94f5c;
+        }
+        .thumbnail div > img {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .info h1 {
+            font-weight: 400;
+        }
+        iframe{
+            position: absolute;
+            left: 0;
+            top: 70px;
+            width: 100%;
+            height: 92%;
+            border: 0;
         }
     </style>
 </head>
@@ -59,7 +84,7 @@
     </nav>
 </div>
 
-<iframe id="main_iframe" th:src="@{/index}" scrolling="auto">
+<iframe id="main_iframe" src="<%=basePath%>/songlist/index.action" scrolling="auto">
 
 </iframe>
 <div class="mp">
@@ -113,10 +138,10 @@
     </div>
 </div>
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="<%= basePath%>js/jquery.js"></script>
-<script src="<%= basePath%>js/mplayer.js"></script>
-<script src="<%= basePath%>js/mplayer-list.js"></script>
-<script src="<%= basePath%>js/mplayer-functions.js"></script>
+<script src="<%= basePath%>mainJs/jquery.js"></script>
+<script src="<%= basePath%>mainJs/mplayer.js"></script>
+<script src="<%= basePath%>mainJs/mplayer-list.js"></script>
+<script src="<%= basePath%>mainJs/mplayer-functions.js"></script>
 <script src="//cdn.bootcss.com/jquery-nstslider/1.0.13/jquery.nstSlider.min.js"></script>
 <script>
     var modeText = ['顺序播放','单曲循环','随机播放','列表循环'];
@@ -136,7 +161,7 @@
         // 当前歌词距离顶部的距离
         lrcTopPos: 34,
         // 列表模板，用${变量名}$插入模板变量
-        listFormat: '<tr><td>${name}$</td><td>${singer}$</td><td>${time}$</td></tr>',
+        listFormat: '<tr><td>\${name}$</td><td>\${singer}$</td><td>\${time}$</td></tr>',
         // 音量滑块改变事件名称
         volSlideEventName:'change',
         // 初始音量
@@ -152,7 +177,7 @@
             console.log('即将播放'+songName+'，return false;可以取消播放');
         }).on('timeUpdate', function () {
             var $this = this;
-            console.log('当前歌词：' + $this.getLrc());
+            // console.log('当前歌词：' + $this.getLrc());
         }).on('end', function () {
             var $this = this;
             var song = $this.getCurrentSong(true);
@@ -190,74 +215,74 @@ jQuery(function () {
          }
      }*/
     jQuery("#MainRecommend").click(function () {
-        if(pre!==0){
+        // if(pre!==0){
             var premain=ind[pre];
             var nextmain=ind[0];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
             console.log(pre);
-            $("#main_iframe").attr("src",contextPath+"/index");
+            $("#main_iframe").attr("src","<%=basePath%>/songlist/index.action");
             pre=0;
-        }
+        // }
     });
     jQuery("#MainRankingList").click(function () {
-        if(pre!==1){
+        // if(pre!==1){
             var premain=ind[pre];
             var nextmain=ind[1];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src",contextPath+"/bangdan");
+            $("#main_iframe").attr("src","<%=basePath%>bangdan.action");
             console.log(pre);
             pre=1;
-        }
+        // }
     });
     jQuery("#MainSongList").click(function () {
-        if(pre!==2){
+        // if(pre!==2){
             var premain=ind[pre];
             var nextmain=ind[2];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src",contextPath+"/songList");
+            $("#main_iframe").attr("src","<%= basePath%>songlist/huayu.action?id=31");
             console.log(pre);
             pre=2;
-        }
+        // }
     });
     jQuery("#MainSinger").click(function () {
-        if(pre!==3){
+        // if(pre!==3){
             var premain=ind[pre];
             var nextmain=ind[3];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src",contextPath+"/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>artist/recommendsinger.action");
             console.log(pre);
             pre=3;
-        }
+        // }
     });
     jQuery("#MainMyMusic").click(function () {
-        if(pre!==4){
+        // if(pre!==4){
             var premain=ind[pre];
             var nextmain=ind[4];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src",contextPath+"/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>user/mysongs.action");
             console.log(pre);
             pre=4;
-        }
+        // }
     });
     jQuery("#MainFriend").click(function () {
-        if(pre!==5){
+        // if(pre!==5){
             var premain=ind[pre];
             var nextmain=ind[5];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src",contextPath+"/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>friend/friendcircle.action");
             console.log(pre);
             pre=5;
-        }
+        // }
     });
     jQuery("#MainLogin").click(function () {
         // $("#main_iframe").attr("src",contextPath+"/test/login");
-        window.parent.location.href=contextPath+"/login";
+        window.parent.location.href="<%=basePath%>/login";
         // $("#main_iframe").attr("src",);
     });
 

@@ -71,8 +71,8 @@
         .songtimebg{
             display: none;
             position: relative;
-            left:160px;
             width: 60px;
+            float: right;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="<%= basePath%>main/css/base.css">

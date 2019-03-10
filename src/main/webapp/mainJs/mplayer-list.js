@@ -271,9 +271,9 @@ function sendSongid(id) {
 			obj["src"]=hearPath()+"/song/"+song.url;
 			obj["lrc"]=song.lrc;
 			var s=JSON.stringify(obj);
-			newplaylist.push(obj);
-			var count = getJsonObjLength(newplaylist);
-			player.addSong(newplaylist[count-1]);
+			mplayer_song.push(obj);
+			var count = getJsonObjLength(mplayer_song);
+			player.addSong(mplayer_song[count-1]);
 
 		}
 	});
@@ -292,9 +292,9 @@ function playSongid(id) {
 			obj["src"]=hearPath()+"/song/"+song.url;
 			obj["lrc"]=song.lyrics;
 			var s=JSON.stringify(obj);
-			newplaylist.push(obj);
-			var count = getJsonObjLength(newplaylist);
-			player.addSong(newplaylist[count-1]);
+			mplayer_song.push(obj);
+			var count = getJsonObjLength(mplayer_song);
+			player.addSong(mplayer_song[count-1]);
 			player.play(count-1);
 
 		}

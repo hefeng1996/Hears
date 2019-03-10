@@ -79,6 +79,7 @@
 <!-- /container -->
 <script src="js/classie.js"></script>
 <script src="js/clipboard.min.js"></script>
+<div class="container">
 <div id="center" style="background-color: white;">
     <div id="left" style="float: left;width:200px;height:800px;background-color: #f5f5f5; border: 1px solid #cccccc;">
         <h4 style=" margin-top: 25px; margin-left: 5px;font-family: '微软雅黑';"><strong>音乐排行榜</strong></h4>
@@ -185,7 +186,7 @@
                                 <td>
                                     <span class="songtime1">${song.time}</span>
                                     <div class="songtimebg1">
-                                        <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                        <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                         <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img src="<%= basePath%>singerhost/shimg/collect01.png"/></a>
                                         <a href="javascript:void(0)" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img src="<%= basePath%>singerhost/shimg/share01.png"/></a>
                                         <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
@@ -409,6 +410,7 @@
         </c:if>
 
     </div>
+</div>
 </div>
 <div style="width: 100%; height: 100px;"></div>
 <script type="text/javascript">

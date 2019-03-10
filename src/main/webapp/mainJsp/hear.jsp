@@ -215,7 +215,7 @@ jQuery(function () {
          }
      }*/
     jQuery("#MainRecommend").click(function () {
-        if(pre!==0){
+        // if(pre!==0){
             var premain=ind[pre];
             var nextmain=ind[0];
             jQuery("#"+premain).removeClass("menu__item_current");
@@ -223,10 +223,10 @@ jQuery(function () {
             console.log(pre);
             $("#main_iframe").attr("src","<%=basePath%>/songlist/index.action");
             pre=0;
-        }
+        // }
     });
     jQuery("#MainRankingList").click(function () {
-        if(pre!==1){
+        // if(pre!==1){
             var premain=ind[pre];
             var nextmain=ind[1];
             jQuery("#"+premain).removeClass("menu__item_current");
@@ -234,10 +234,10 @@ jQuery(function () {
             $("#main_iframe").attr("src","<%=basePath%>bangdan.action");
             console.log(pre);
             pre=1;
-        }
+        // }
     });
     jQuery("#MainSongList").click(function () {
-        if(pre!==2){
+        // if(pre!==2){
             var premain=ind[pre];
             var nextmain=ind[2];
             jQuery("#"+premain).removeClass("menu__item_current");
@@ -245,40 +245,40 @@ jQuery(function () {
             $("#main_iframe").attr("src","<%= basePath%>songlist/huayu.action?id=31");
             console.log(pre);
             pre=2;
-        }
+        // }
     });
     jQuery("#MainSinger").click(function () {
-        if(pre!==3){
+        // if(pre!==3){
             var premain=ind[pre];
             var nextmain=ind[3];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src","<%=basePath%>/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>artist/recommendsinger.action");
             console.log(pre);
             pre=3;
-        }
+        // }
     });
     jQuery("#MainMyMusic").click(function () {
-        if(pre!==4){
+        // if(pre!==4){
             var premain=ind[pre];
             var nextmain=ind[4];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src","<%=basePath%>/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>user/mysongs.action");
             console.log(pre);
             pre=4;
-        }
+        // }
     });
     jQuery("#MainFriend").click(function () {
-        if(pre!==5){
+        // if(pre!==5){
             var premain=ind[pre];
             var nextmain=ind[5];
             jQuery("#"+premain).removeClass("menu__item_current");
             jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src","<%=basePath%>/test/index1");
+            $("#main_iframe").attr("src","<%= basePath%>friend/friendcircle.action");
             console.log(pre);
             pre=5;
-        }
+        // }
     });
     jQuery("#MainLogin").click(function () {
         // $("#main_iframe").attr("src",contextPath+"/test/login");

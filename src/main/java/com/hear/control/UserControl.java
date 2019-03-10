@@ -506,7 +506,7 @@ public class UserControl {
         request.setAttribute("tags",tags);
 
         try {
-            request.getRequestDispatcher("/jsp/mysongs.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/mysongs.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

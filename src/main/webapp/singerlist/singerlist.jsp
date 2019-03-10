@@ -662,7 +662,7 @@
 
                 <!-- 推荐歌手 (形状) -->
                 <div id="u66" class="ax_形状" data-label="推荐歌手">
-                    <img id="u66_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u66_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u67" class="text">
                         <p><span>&#149; 推荐歌手</span></p>
@@ -671,7 +671,7 @@
 
                 <!-- 入驻歌手 (形状) -->
                 <div id="u68" class="ax_形状" data-label="入驻歌手">
-                    <img id="u68_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u68_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u69" class="text">
                         <p><span>&#149; </span><span>入驻歌手</span></p>
@@ -696,7 +696,7 @@
 
                 <!-- 华语男歌手 (形状) -->
                 <div id="u73" class="ax_形状" data-label="华语男歌手">
-                    <img id="u73_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u73_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u74" class="text">
                         <p><span>&#149; </span><span>华语男歌手</span></p>
@@ -705,7 +705,7 @@
 
                 <!-- 华语女歌手 (形状) -->
                 <div id="u75" class="ax_形状" data-label="华语女歌手">
-                    <img id="u75_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u75_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u76" class="text">
                         <p><span>&#149; </span><span>华语</span><span>女</span><span>歌手</span></p>
@@ -714,7 +714,7 @@
 
                 <!-- 华语组合乐队 (形状) -->
                 <div id="u77" class="ax_形状" data-label="华语组合乐队">
-                    <img id="u77_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u77_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u78" class="text">
                         <p><span>&#149; </span><span>华语</span><span>组合乐队</span></p>
@@ -739,7 +739,7 @@
 
                 <!-- 欧美男歌手 (形状) -->
                 <div id="u82" class="ax_形状" data-label="欧美男歌手">
-                    <img id="u82_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u82_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u83" class="text">
                         <p><span>&#149; </span><span>欧美</span><span>男歌手</span></p>
@@ -748,7 +748,7 @@
 
                 <!-- 欧美女歌手 (形状) -->
                 <div id="u84" class="ax_形状" data-label="欧美女歌手">
-                    <img id="u84_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u84_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u85" class="text">
                         <p><span>&#149; </span><span>欧美</span><span>女</span><span>歌手</span></p>
@@ -757,7 +757,7 @@
 
                 <!-- 欧美组合乐队 (形状) -->
                 <div id="u86" class="ax_形状" data-label="欧美组合乐队">
-                    <img id="u86_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u86_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u87" class="text">
                         <p><span>&#149; </span><span>欧美</span><span>组合乐队</span></p>
@@ -782,7 +782,7 @@
 
                 <!-- 日韩男歌手 (形状) -->
                 <div id="u91" class="ax_形状" data-label="日韩男歌手">
-                    <img id="u91_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u91_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u92" class="text">
                         <p><span>&#149; </span><span>日韩</span><span>男歌手</span></p>
@@ -791,7 +791,7 @@
 
                 <!-- 日韩女歌手 (形状) -->
                 <div id="u93" class="ax_形状" data-label="日韩女歌手">
-                    <img id="u93_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u93_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u94" class="text">
                         <p><span>&#149; </span><span>日韩</span><span>女</span><span>歌手</span></p>
@@ -800,7 +800,7 @@
 
                 <!-- 日韩组合乐队 (形状) -->
                 <div id="u95" class="ax_形状" data-label="日韩组合乐队">
-                    <img id="u95_img" class="img " src="<%= basePath%>singerlist/images/singerlist/推荐歌手_u66.png"/>
+                    <img id="u95_img" class="img " src="<%= basePath%>singerlist/images/singerlist/singer_u66.png"/>
                     <!-- Unnamed () -->
                     <div id="u96" class="text">
                         <p><span>&#149; </span><span>日韩</span><span>组合乐队</span></p>

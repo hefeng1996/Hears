@@ -10,7 +10,8 @@
     var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
 
     //得到了 http://localhost:8083/myproj
-    var realPath=localhostPaht+projectName;
+    // var realPath=localhostPaht+projectName;
+    var realPath=localhostPaht;
     return realPath;
 }
 
@@ -1699,8 +1700,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"389cb9f461184238939e0164f0375feb",
                   "label":"入驻歌手",
@@ -1951,8 +1952,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"114e54622540455cada4ffc9590e2b29",
                   "label":"分割线一",
@@ -2267,8 +2268,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"246d79d293384620a8d0c2563eab0f51",
                   "label":"华语女歌手",
@@ -2519,8 +2520,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"a4b02af710db4a1b8a670f1cbd20a98f",
                   "label":"华语组合乐队",
@@ -2771,8 +2772,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"0e180858e35440fdac666ccdc61fb0d0",
                   "label":"分割线二",
@@ -3087,8 +3088,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"773fb2a932f149e093ec9d423bb97f51",
                   "label":"欧美女歌手",
@@ -3339,8 +3340,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"767233553fb04c369c88b6db8d587916",
                   "label":"欧美组合乐队",
@@ -3591,8 +3592,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"ddf512e3d255403cad94d603ab01a360",
                   "label":"分割线三",
@@ -3907,8 +3908,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"53d158f81ea6498c9043f8439f2cbd92",
                   "label":"日韩女歌手",
@@ -4159,8 +4160,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}},
 {
                   "id":"dc6226cd7b114ebf9ec0a1734b2f5224",
                   "label":"日韩组合乐队",
@@ -4411,8 +4412,8 @@ $axure.loadCurrentPage({
                                       "compress":false}}}]}]}]}},
                   "tabbable":true,
                   "images":{
-                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
-                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}}]}]}]}},
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/singer_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/singer_u66_selected.png"}}]}]}]}},
   "masters":{
 },
   "objectPaths":{
