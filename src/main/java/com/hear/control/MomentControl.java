@@ -75,7 +75,7 @@ public class MomentControl {
             moments.setList(momentList);
             request.setAttribute("moments",moments);
 
-            request.getRequestDispatcher("/jsp/friendcircle.jsp").forward(request,response
+            request.getRequestDispatcher("/mainJsp/friendcircle.jsp").forward(request,response
             );
 
         }

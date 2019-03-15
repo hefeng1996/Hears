@@ -573,7 +573,6 @@ public class UserControl {
     }
 
     @RequestMapping(value = "/personalmoments.action",method = RequestMethod.GET)
-
     public void personalmoments(String id,HttpSession session,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         User u= (User) session.getAttribute("user");
         int userid=0;
@@ -622,7 +621,7 @@ public class UserControl {
         request.setAttribute("user",user);
         request.setAttribute("attention",relations13);
         request.setAttribute("fans",relations23);
-        request.getRequestDispatcher("/jsp/personalDynamics.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/personalDynamics.jsp").forward(request,response);
     }
 
 }

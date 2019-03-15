@@ -208,7 +208,6 @@
 
 <%--<a name="gotop">&nbsp;</a>--%>
 
-
 <div style="height: 1000px;width: 1000px;margin-left:180px;border: 1px solid #e0e0e0;background-color: white">
 
     <div style="width: 200px;height: 550px;margin-left: 40px;float: left ;position: fixed;top: 70px;overflow-y: auto">
@@ -651,7 +650,6 @@
     <a title="返回底部" class="bottom" href="#gobottom"></a>
 </div>
 
-
 <script>
     function remove(val,data) {
         var songtab="#tab"+val;
@@ -841,12 +839,12 @@
     });
 </script><%--table样式--%>
 
-<link rel="stylesheet" href="<%= basePath%>singerhost/playercss/mplayer.css">
-<script src="<%= basePath%>singerhost/playerjs/jquery.min.js"></script>
-<script src="<%= basePath%>singerhost/playerjs/mplayer.js"></script>
-<script src="<%= basePath%>singerhost/playerjs/mplayer-list.js"></script>
-<script src="<%= basePath%>singerhost/playerjs/mplayer-functions.js"></script>
-<script src="http://cdn.bootcss.com/jquery-nstslider/1.0.13/jquery.nstSlider.min.js"></script>
+<%--<link rel="stylesheet" href="<%= basePath%>singerhost/playercss/mplayer.css">--%>
+<%--<script src="<%= basePath%>singerhost/playerjs/jquery.min.js"></script>--%>
+<%--<script src="<%= basePath%>singerhost/playerjs/mplayer.js"></script>--%>
+<%--<script src="<%= basePath%>singerhost/playerjs/mplayer-list.js"></script>--%>
+<%--<script src="<%= basePath%>singerhost/playerjs/mplayer-functions.js"></script>--%>
+<%--<script src="http://cdn.bootcss.com/jquery-nstslider/1.0.13/jquery.nstSlider.min.js"></script>--%>
 
 <%--模态框--%>
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
