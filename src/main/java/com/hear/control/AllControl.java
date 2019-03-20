@@ -73,7 +73,7 @@ public class AllControl {
             }
         }
         request.setAttribute("users",users);
-        request.getRequestDispatcher("/jsp/search.jsp").forward(request,response);
+        request.getRequestDispatcher("/mainJsp/search.jsp").forward(request,response);
 
     }
 

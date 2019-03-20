@@ -69,9 +69,9 @@
             <div class="col-md-1"><span class="menu__item"><a id="MainMyMusic" class="menu__link">我的音乐</a></span></div>
             <div class="col-md-1"><span class="menu__item"><a id="MainFriend" class="menu__link" style="z-index: 0">朋友</a></span></div>
             <div class="col-md-2 search d7" style="position: relative;left: 7%">
-                <form action="<%=basePath%>search/searchall.action" method="get">
-                    <input type="text" placeholder="Hear..." name="content">
-                    <button type="submit"><img src="<%= basePath%>main/img/1.jpg" style="position: relative;left: -6px"/></button>
+                <form action="<%=basePath%>search/searchall.action" method="get" target="posthere">
+                    <input type="text" placeholder="Hear..." name="content" id="content">
+                    <button type="submit" id="MainSerach"><img src="<%= basePath%>main/img/1.jpg" style="position: relative;left: -10px"/></button>
                 </form>
             </div>
             <div class="col-md-2" style="width: 70px;position: relative;left: 5%">
@@ -105,7 +105,7 @@
     </nav>
 </div>
 
-<iframe id="main_iframe" src="<%=basePath%>/songlist/index.action" scrolling="auto">
+<iframe id="main_iframe" name="posthere" src="<%=basePath%>/songlist/index.action" scrolling="auto">
 
 </iframe>
 <div class="mp">
@@ -320,16 +320,23 @@ jQuery(function () {
         // $("#main_iframe").attr("src",);
     });
     jQuery("#MainImg").click(function () {
-        // if(pre!==5){
-        // var premain=ind[pre];
-        // var nextmain=ind[5];
-        // jQuery("#"+premain).removeClass("menu__item_current");
-        // jQuery("#"+nextmain).addClass("menu__item_current");
-        $("#main_iframe").attr("src","<%=basePath%>user/personalInformation.action");
-        // console.log(pre);
-        // pre=5;
-        // }
+
+        var content = document.getElementById("content").value;
+
+        $("#main_iframe").attr("src","<%=basePath%>search/searchall.action?content="+content);
+
     });
+    <%--jQuery("#MainSerach").click(function () {--%>
+        <%--// if(pre!==5){--%>
+        <%--// var premain=ind[pre];--%>
+        <%--// var nextmain=ind[5];--%>
+        <%--// jQuery("#"+premain).removeClass("menu__item_current");--%>
+        <%--// jQuery("#"+nextmain).addClass("menu__item_current");--%>
+        <%--$("#main_iframe").attr("src","<%=basePath%>user/personalInformation.action");--%>
+        <%--// console.log(pre);--%>
+        <%--// pre=5;--%>
+        <%--// }--%>
+    <%--});--%>
     jQuery("#MainLogout").click(function () {
         // if(pre!==5){
         // var premain=ind[pre];
