@@ -207,290 +207,388 @@
 
 
 <%--<a name="gotop">&nbsp;</a>--%>
+<div class="container">
+    <div style="height: 1000px;width: 1000px;border: 1px solid #e0e0e0;background-color: white">
 
-<div style="height: 1000px;width: 1000px;margin-left:180px;border: 1px solid #e0e0e0;background-color: white">
-
-    <div style="width: 200px;height: 550px;margin-left: 40px;float: left ;position: fixed;top: 70px;overflow-y: auto">
-        <div id="dd" class="container2" style="margin-top:50px">
-            <div class="link">
-                <div class="text">首页</div>
-            </div>
-            <div class="link">
-                <a href="<%=basePath%>user/personalInformation.action"><div class="text">个人中心</div></a>
-            </div>
-            <div class="link" id="mysinger">
-                <div  class="text">我的歌手</div>
-            </div>
-            <div class="link" id="createsonglist">
-                <div  class="text">创建歌单</div>
-            </div>
-            <div class="link" id="createlist">
-                <div  class="text">创建的歌单</div>
-            </div>
-                <div  id="create">
-                <c:forEach items="${songlist}" var="list">
-                <div class="${list.id} link" style="margin-top: -15px" onclick="songhidden(${list.id})">
-                    <div class="text" style="margin-left: 20px;font-size: 12px;">
-                            -${list.name}
-                    </div>
+        <div style="width: 200px;height: 550px;margin-left: 40px;float: left ;position: fixed;top: 70px;overflow-y: auto">
+            <div id="dd" class="container2" style="margin-top:50px">
+                <div class="link">
+                    <div class="text">首页</div>
                 </div>
-                </c:forEach>
+                <div class="link">
+                    <a href="<%=basePath%>user/personalInformation.action"><div class="text">个人中心</div></a>
                 </div>
-            <div class="link" id="likelist">
-                <div class="text">收藏的歌单</div>
-            </div>
-                <div id="like">
-                    <c:forEach items="${likesonglist}" var="list">
-                        <div  class="${list.id} link" style="margin-top: -15px" onclick="likesonghidden(${list.id})">
-                            <div class="text" style="margin-left: 20px;font-size: 12px;">
+                <div class="link" id="mysinger">
+                    <div  class="text">我的歌手</div>
+                </div>
+                <div class="link" id="createsonglist">
+                    <div  class="text">创建歌单</div>
+                </div>
+                <div class="link" id="createlist">
+                    <div  class="text">创建的歌单</div>
+                </div>
+                    <div  id="create">
+                    <c:forEach items="${songlist}" var="list">
+                    <div class="${list.id} link" style="margin-top: -15px" onclick="songhidden(${list.id})">
+                        <div class="text" style="margin-left: 20px;font-size: 12px;">
                                 -${list.name}
-                            </div>
                         </div>
+                    </div>
                     </c:forEach>
+                    </div>
+                <div class="link" id="likelist">
+                    <div class="text">收藏的歌单</div>
                 </div>
-        </div>
-    </div>
-
-    <div hidden id="singer" class="aaa" style="width: 720px;height:100%;margin-left: 280px;margin-top: 70px">
-        <div style="height: 50px"></div>
-        <h1><span style="color:rgba(46,46,46,0.9);font-weight: bold">我的歌手（${fn:length(mySingers)}）</span></h1>
-        <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
-        <div style="height: 100px;width:680px;">
-
-            <table>
-                <c:forEach items="${mySingers}" var="mysinger" >
-                <tr>
-                    <td>
-                        <div style="height: 100px;width:680px;border-bottom:1px solid #e0e0e0 ">
-                            <a href="<%=basePath%>artist/singerhost.action?id=${mysinger.singer.id}"><img src="<%=resourcesPath%>images/100singer/${mysinger.singer.img}" style="width: 80px;height: 80px;margin-top: 10px"></a>
-                            <div style="margin-left: 100px;margin-top: -70px">
-                                <span style="color:rgba(0,0,0,0.9);font-weight: bolder;font-size: 18px"><a href="<%=basePath%>artist/singerhost.action?id=${mysinger.singer.id}">${mysinger.singer.name}</a></span>
+                    <div id="like">
+                        <c:forEach items="${likesonglist}" var="list">
+                            <div  class="${list.id} link" style="margin-top: -15px" onclick="likesonghidden(${list.id})">
+                                <div class="text" style="margin-left: 20px;font-size: 12px;">
+                                    -${list.name}
+                                </div>
                             </div>
-                            <div style="margin-left: 100px;margin-top: 20px">
-                                <span style="color:rgba(0,0,0,0.7);font-size: 12px"><span>${mysinger.singer.albumcount}</span>个专辑&nbsp;&nbsp;&nbsp;</span>
+                        </c:forEach>
+                    </div>
+            </div>
+        </div>
+
+        <div hidden id="singer" class="aaa" style="width: 720px;height:100%;margin-left: 280px;margin-top: 70px">
+            <div style="height: 50px"></div>
+            <h1><span style="color:rgba(46,46,46,0.9);font-weight: bold">我的歌手（${fn:length(mySingers)}）</span></h1>
+            <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
+            <div style="height: 100px;width:680px;">
+
+                <table>
+                    <c:forEach items="${mySingers}" var="mysinger" >
+                    <tr>
+                        <td>
+                            <div style="height: 100px;width:680px;border-bottom:1px solid #e0e0e0 ">
+                                <a href="<%=basePath%>artist/singerhost.action?id=${mysinger.singer.id}"><img src="<%=resourcesPath%>images/100singer/${mysinger.singer.img}" style="width: 80px;height: 80px;margin-top: 10px"></a>
+                                <div style="margin-left: 100px;margin-top: -70px">
+                                    <span style="color:rgba(0,0,0,0.9);font-weight: bolder;font-size: 18px"><a href="<%=basePath%>artist/singerhost.action?id=${mysinger.singer.id}">${mysinger.singer.name}</a></span>
+                                </div>
+                                <div style="margin-left: 100px;margin-top: 20px">
+                                    <span style="color:rgba(0,0,0,0.7);font-size: 12px"><span>${mysinger.singer.albumcount}</span>个专辑&nbsp;&nbsp;&nbsp;</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </c:forEach>
+                </table>
+
+            </div>
+        </div><%--我的歌手--%>
+
+        <div hidden id="new" class="aaa" style="width: 720px;height: 600px;margin-left: 280px;margin-top: 100px;">
+            <div style="margin-left: 60px;margin-top: 40px"><h3><span style="color: black;font-weight: bolder">新建歌单</span></h3></div>
+            <hr style="width: 600px;margin-top: 10px">
+            <div>
+                <form id="form1" action="<%=basePath%>user/createsonglist.action" onsubmit="return check()" enctype="multipart/form-data" method="post">
+                    <div style="margin-left: -230px">
+                        <div><span style="color: red">*</span><span style="font-size: 14px;color: black">歌单名:</span></div>
+                        <input id="listname" type="text" name="listname" value="" class="form-control" maxlength="8"  style="width: 260px;margin-left: 55px;margin-top: -25px">
+                        <div style="height: 20px"><span>&nbsp;</span></div>
+                    </div>
+
+                    <div style="margin-left: -230px">
+                        <div style="margin-left: 20px"><span style="font-size: 14px;color: black">标签:</span></div>
+                        <div style="margin-left: 55px;margin-top: -20px">
+                            <table>
+                                <tr style="font-size: 12px">
+                                    <c:forEach items="${tags}" var="tag" varStatus="s">
+                                    <td style="width: 60px">
+                                        <input type="checkbox" value="${tag.id}" name="checkbox">
+                                        <label style="color: black">${tag.name}</label>
+                                    </td>
+                                        <c:if test="${s.count%4==0}">
+                                            </tr><tr style="width: 60px;font-size: 12px">
+                                        </c:if>
+                                    </c:forEach>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div style="margin-left: -230px;margin-top: 20px;color: black">
+                        <div style="margin-left: 20px"><span style="font-size: 14px;color: black">介绍:</span></div>
+                        <textarea name="introduce" cols="34" rows="5" style="margin-left: 55px;margin-top: -25px;resize: none"></textarea>
+                    </div>
+                    <div style="margin-left: -170px;margin-top: 20px;color: black;">
+                        <input id="submitbutton" class="btn btn-info" style="width: 100px" type="submit" value="保存">
+                        <input class="btn btn-info" style="width: 100px;margin-left: 50px" type="button" value="取消">
+                    </div>
+
+                    <div style="width: 300px;margin-top: -410px;margin-left: 100px">
+                        <div id="change"  style="margin-left: 75px;margin-top:0px;width: 150px;height: 150px;border:1px solid #b4b4b4" >
+                                <img src="<%=basePath%>images/default.jpg" width="140px" height="140px " style="margin:4px 4px">
+                            <div id="changeimg" class="changeimg">
+                                <span id="font" class="font" style="color: black" >更换头像<input name="imgup" type="file" class="upload_pic" id="upload" /></span>
+                            </div>
+
+                        </div>
+
+                        <div class="con4" >
+                            <canvas id="cvs" width="200" height="200"></canvas>
+                        </div>
+
+                        <div>
+                            <button id="clean" type="button" class="btn btn-default" style="width: 150px;margin-left: 75px;margin-top: -5px">取消头像上传</button>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div><%--创建歌单--%>
+        <c:forEach items="${songlist}" var="list" varStatus="s">
+                <c:if test="${s.count==1}">
+                    <div id="${list.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
+                        <div style="width: 209px;height: 209px;border: 1px solid #e0e0e0;margin-top: 40px ">
+                            <c:if test="${not empty list.img}">
+                                <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=resourcesPath%>images/200songlist/${list.img}"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
+                            </c:if>
+                            <c:if test="${empty list.img}">
+                                <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=basePath%>images/default.jpg"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
+                            </c:if>
+                        </div>
+
+                    <div style="margin-top: -200px;margin-left: 230px">
+                        <div style="background-color: #b90200;width: 40px" align="center"><span>歌单</span></div>
+                    </div>
+                    <div style="margin-left: 280px;margin-top: -25px">
+                        <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><span style="color: #0f0f0f;font-size: 20px">${list.name}</span></a>
+                    </div>
+                    <div  style="margin-top:20px;margin-left: 230px;">
+                        <a href="<%=basePath%>user/personalInformation.action" ><img src="<%=resourcesPath%>head/${sessionScope.user.img}" style="width: 36px;height: 36px"></a>
+                        <div style="margin-left: 50px;margin-top: -30px">
+                            <a class="a" href="<%=basePath%>user/personalInformation.action"><span style="font-size: 12px;color: #5763ff">${sessionScope.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${list.createtime}" type="both"/> </span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;margin-left: 230px">
+                        <%--<a class="btn btn-default" href="#" role="button">播放</a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/shareto.png" style="height: 16px;width: 16px">分享</a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/download.png" style="height: 16px;width: 16px">下载</a><br/>
+                        &nbsp;<br/>--%>
+                        <c:if test="${ not empty list.introduce}">
+                            <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${list.introduce}</span>
+                        </c:if>
+                        <c:if test="${ empty list.introduce}">
+                            <span style="color:rgba(46,46,46,0.6);font-size: 12px">&nbsp;</span>
+                        </c:if>
+                    </div>
+                    <div style="margin-left: 600px;margin-top: -135px">
+                        <a href="<%=basePath%>user/removesonglist.action?songlistId=${list.id}">删除</a>
+                    </div>
+                    <div style="margin-top: 220px">
+                        <div>
+                            <h2><span style="color:rgba(46,46,46,0.7)">歌曲列表</span></h2>
+                            <div style="margin-top: -25px;margin-left: 130px">
+                                <span style="color:rgba(46,46,46,0.7);font-size: 12px"><span id="count${list.id}" >${fn:length(list.songs)}</span><span>首歌</span></span>
                             </div>
                         </div>
-                    </td>
-                </tr>
-                </c:forEach>
-            </table>
+                        <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
+                        <div style="height: 100px;width:680px;">
+                        </div>
+                    </div>
 
-        </div>
-    </div><%--我的歌手--%>
-
-    <div hidden id="new" class="aaa" style="width: 720px;height: 600px;margin-left: 280px;margin-top: 100px;">
-        <div style="margin-left: 60px;margin-top: 40px"><h3><span style="color: black;font-weight: bolder">新建歌单</span></h3></div>
-        <hr style="width: 600px;margin-top: 10px">
-        <div>
-            <form id="form1" action="<%=basePath%>user/createsonglist.action" onsubmit="return check()" enctype="multipart/form-data" method="post">
-                <div style="margin-left: -230px">
-                    <div><span style="color: red">*</span><span style="font-size: 14px;color: black">歌单名:</span></div>
-                    <input id="listname" type="text" name="listname" value="" class="form-control" maxlength="8"  style="width: 260px;margin-left: 55px;margin-top: -25px">
-                    <div style="height: 20px"><span>&nbsp;</span></div>
-                </div>
-
-                <div style="margin-left: -230px">
-                    <div style="margin-left: 20px"><span style="font-size: 14px;color: black">标签:</span></div>
-                    <div style="margin-left: 55px;margin-top: -20px">
-                        <table>
-                            <tr style="font-size: 12px">
-                                <c:forEach items="${tags}" var="tag" varStatus="s">
-                                <td style="width: 60px">
-                                    <input type="checkbox" value="${tag.id}" name="checkbox">
-                                    <label style="color: black">${tag.name}</label>
-                                </td>
-                                    <c:if test="${s.count%4==0}">
-                                        </tr><tr style="width: 60px;font-size: 12px">
-                                    </c:if>
+                    <div style="width: 720px;height:auto;margin-top: -100px">
+                        <div style="width: 75px;height: 35px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <span></span>
+                        </div>
+                        <div style="width: 250px;height: 35px;margin-top: -35px;margin-left: 75px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0; ">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌曲标题</span>
+                        </div>
+                        <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:325px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;时长</span>
+                        </div>
+                        <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:435px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌手</span>
+                        </div>
+                        <div style="width: 135px;height: 35px;margin-top: -35px;margin-left:545px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;专辑</span>
+                        </div>
+                        <div>
+                            <table id="tab${list.id}" class="table-hover">
+                                <c:forEach items="${list.songs}" var="song" varStatus="s">
+                                    <tr id="${song.id}" class="song" style="height: 40px" onmouseover="over(${song.id})" onmouseout="out(${song.id})">
+                                        <td style="width: 35px" align="right">
+                                            <div class="image" hidden="hidden">
+                                                <a title="删除" onclick="remove(${list.id},${song.id})"><img  style="width: 16px;height: 16px;opacity: 0.4" src="<%=basePath%>images/delete.png"></a>
+                                            </div>
+                                        </td>
+                                        <td style="width: 40px" align="center"><a href="javascript:parent.playSongid('${song.id}')"><img src="<%=basePath%>images/play2.png" style="width: 16px;height: 16px"></a> </td>
+                                        <td style="width: 250px"><span style="color:rgba(46,46,46,0.8);font-size: 12px;font-weight: bolder">&nbsp;<a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></span> </td>
+                                        <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 12px">
+                                            <div class="songtime">&nbsp;<fmt:formatNumber type="number" value="${song.duration/60}" maxFractionDigits="0"/>:${song.duration%60}</div>
+                                            <div class="image" hidden="hidden">
+                                                <%--改--%>
+                                                &nbsp;<a href="javascript:parent.sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>&nbsp;
+                                                <%--<a href="#" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img src="<%=basePath%>images/collection.png"></a>&nbsp;--%>
+                                                <%--<a href="#" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img src="<%=basePath%>images/share01.png"></a>&nbsp;--%>
+                                                <a href="<%=resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%=basePath%>images/download01.png"></a>
+                                            </div>
+                                        </td>
+                                        <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/artist/singerhost.action?id=${song.singer.id}">${song.singer.name}</a></td>
+                                        <td style="width: 135px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/album.action?id=${song.album.id}">${song.album.name}</a></td>
+                                    </tr>
                                 </c:forEach>
-                            </tr>
-                        </table>
-                    </div>
-
-                </div>
-                <div style="margin-left: -230px;margin-top: 20px;color: black">
-                    <div style="margin-left: 20px"><span style="font-size: 14px;color: black">介绍:</span></div>
-                    <textarea name="introduce" cols="34" rows="5" style="margin-left: 55px;margin-top: -25px;resize: none"></textarea>
-                </div>
-                <div style="margin-left: -170px;margin-top: 20px;color: black;">
-                    <input id="submitbutton" class="btn btn-info" style="width: 100px" type="submit" value="保存">
-                    <input class="btn btn-info" style="width: 100px;margin-left: 50px" type="button" value="取消">
-                </div>
-
-                <div style="width: 300px;margin-top: -410px;margin-left: 100px">
-                    <div id="change"  style="margin-left: 75px;margin-top:0px;width: 150px;height: 150px;border:1px solid #b4b4b4" >
-                            <img src="<%=basePath%>images/default.jpg" width="140px" height="140px " style="margin:4px 4px">
-                        <div id="changeimg" class="changeimg">
-                            <span id="font" class="font" style="color: black" >更换头像<input name="imgup" type="file" class="upload_pic" id="upload" /></span>
+                            </table>
                         </div>
-
                     </div>
 
-                    <div class="con4" >
-                        <canvas id="cvs" width="200" height="200"></canvas>
-                    </div>
+                </div><%--创建的歌单--%>
 
-                    <div>
-                        <button id="clean" type="button" class="btn btn-default" style="width: 150px;margin-left: 75px;margin-top: -5px">取消头像上传</button>
-                    </div>
+            </c:if>
 
-                </div>
-
-
-
-            </form>
-        </div>
-    </div><%--创建歌单--%>
-    <c:forEach items="${songlist}" var="list" varStatus="s">
-            <c:if test="${s.count==1}">
-                <div id="${list.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
+            <c:if test="${s.count!=1}">
+                <div hidden id="${list.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
                     <div style="width: 209px;height: 209px;border: 1px solid #e0e0e0;margin-top: 40px ">
                         <c:if test="${not empty list.img}">
                             <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=resourcesPath%>images/200songlist/${list.img}"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
                         </c:if>
                         <c:if test="${empty list.img}">
-                            <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=basePath%>images/default.jpg"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
+                            <a  href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=basePath%>images/default.jpg"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
                         </c:if>
                     </div>
 
-                <div style="margin-top: -200px;margin-left: 230px">
-                    <div style="background-color: #b90200;width: 40px" align="center"><span>歌单</span></div>
-                </div>
-                <div style="margin-left: 280px;margin-top: -25px">
-                    <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><span style="color: #0f0f0f;font-size: 20px">${list.name}</span></a>
-                </div>
-                <div  style="margin-top:20px;margin-left: 230px;">
-                    <a href="<%=basePath%>user/personalInformation.action" ><img src="<%=resourcesPath%>head/${sessionScope.user.img}" style="width: 36px;height: 36px"></a>
-                    <div style="margin-left: 50px;margin-top: -30px">
-                        <a class="a" href="<%=basePath%>user/personalInformation.action"><span style="font-size: 12px;color: #5763ff">${sessionScope.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${list.createtime}" type="both"/> </span>
+                    <div style="margin-top: -200px;margin-left: 230px">
+                        <div style="background-color: #b90200;width: 40px" align="center"><span>歌单</span></div>
                     </div>
-                </div>
-                <div style="margin-top: 30px;margin-left: 230px">
-                    <%--<a class="btn btn-default" href="#" role="button">播放</a>&nbsp;&nbsp;&nbsp;
-                    <a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/shareto.png" style="height: 16px;width: 16px">分享</a>&nbsp;&nbsp;&nbsp;
-                    <a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/download.png" style="height: 16px;width: 16px">下载</a><br/>
-                    &nbsp;<br/>--%>
-                    <c:if test="${ not empty list.introduce}">
-                        <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${list.introduce}</span>
-                    </c:if>
-                    <c:if test="${ empty list.introduce}">
-                        <span style="color:rgba(46,46,46,0.6);font-size: 12px">&nbsp;</span>
-                    </c:if>
-                </div>
-                <div style="margin-left: 600px;margin-top: -135px">
-                    <a href="<%=basePath%>user/removesonglist.action?songlistId=${list.id}">删除</a>
-                </div>
-                <div style="margin-top: 220px">
-                    <div>
-                        <h2><span style="color:rgba(46,46,46,0.7)">歌曲列表</span></h2>
-                        <div style="margin-top: -25px;margin-left: 130px">
-                            <span style="color:rgba(46,46,46,0.7);font-size: 12px"><span id="count${list.id}" >${fn:length(list.songs)}</span><span>首歌</span></span>
+                    <div style="margin-left: 280px;margin-top: -25px">
+                        <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><span style="color: #0f0f0f;font-size: 20px">${list.name}</span></a>
+                    </div>
+                    <div  style="margin-top:20px;margin-left: 230px;">
+
+                        <a href="<%=basePath%>use/personalInformation.action"><img src="<%=resourcesPath%>/head/${sessionScope.user.img}" style="width: 36px;height: 36px"></a>
+                        <div style="margin-left: 50px;margin-top: -30px">
+                            <a class="a" href="<%=basePath%>user/personalInformation.action"><span style="font-size: 12px;color: #5763ff">${sessionScope.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${list.createtime}" type="both"/> </span>
                         </div>
                     </div>
-                    <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
-                    <div style="height: 100px;width:680px;">
+                    <div style="margin-top: 30px;margin-left: 230px">
+                        <%--<a class="btn btn-default" href="#" role="button">播放</a>&nbsp;&nbsp;&nbsp;--%>
+                        <%--<a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/shareto.png" style="height: 16px;width: 16px">分享</a>&nbsp;&nbsp;&nbsp;--%>
+                        <%--<a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/download.png" style="height: 16px;width: 16px">下载</a><br/>--%>
+                        <%--&nbsp;<br/>--%>
+                        <c:if test="${ not empty list.introduce}">
+                            <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${list.introduce}</span>
+                        </c:if>
+                        <c:if test="${ empty list.introduce}">
+                            <span style="color:rgba(46,46,46,0.6);font-size: 12px">&nbsp;</span>
+                        </c:if>
                     </div>
-                </div>
+                    <div style="margin-left: 600px;margin-top: -135px">
+                        <a href="<%=basePath%>user/removesonglist.action?songlistId=${list.id}">删除</a>
+                    </div>
+                    <div style="margin-top: 220px">
+                        <div>
+                            <h2><span style="color:rgba(46,46,46,0.7)">歌曲列表</span></h2>
+                            <div style="margin-top: -25px;margin-left: 130px">
+                                <span style="color:rgba(46,46,46,0.7);font-size: 12px"><span id="count${list.id}" >${fn:length(list.songs)}</span><span>首歌</span></span>
+                            </div>
+                        </div>
+                        <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
+                        <div style="height: 100px;width:680px;">
+                        </div>
+                    </div>
 
-                <div style="width: 720px;height:auto;margin-top: -100px">
-                    <div style="width: 75px;height: 35px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                        <span></span>
-                    </div>
-                    <div style="width: 250px;height: 35px;margin-top: -35px;margin-left: 75px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0; ">
-                        <div style="height: 10px"></div>
-                        <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌曲标题</span>
-                    </div>
-                    <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:325px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                        <div style="height: 10px"></div>
-                        <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;时长</span>
-                    </div>
-                    <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:435px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                        <div style="height: 10px"></div>
-                        <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌手</span>
-                    </div>
-                    <div style="width: 135px;height: 35px;margin-top: -35px;margin-left:545px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                        <div style="height: 10px"></div>
-                        <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;专辑</span>
-                    </div>
-                    <div>
-                        <table id="tab${list.id}" class="table-hover">
-                            <c:forEach items="${list.songs}" var="song" varStatus="s">
-                                <tr id="${song.id}" class="song" style="height: 40px" onmouseover="over(${song.id})" onmouseout="out(${song.id})">
-                                    <td style="width: 35px" align="right">
-                                        <div class="image" hidden="hidden">
+                    <div style="width: 720px;height:auto;margin-top: -100px">
+                        <div style="width: 75px;height: 35px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <span></span>
+                        </div>
+                        <div style="width: 250px;height: 35px;margin-top: -35px;margin-left: 75px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0; ">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌曲标题</span>
+                        </div>
+                        <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:325px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;时长</span>
+                        </div>
+                        <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:435px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌手</span>
+                        </div>
+                        <div style="width: 135px;height: 35px;margin-top: -35px;margin-left:545px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
+                            <div style="height: 10px"></div>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;专辑</span>
+                        </div>
+                        <div>
+                            <table id="tab${list.id}" class="table-hover">
+                                <c:forEach items="${list.songs}" var="song" varStatus="s">
+                                    <tr id="${song.id}" class="song" style="height: 40px" onmouseover="over(${song.id})" onmouseout="out(${song.id})">
+                                        <td style="width: 35px" align="right">
+                                            <div class="image" hidden="hidden">
                                             <a title="删除" onclick="remove(${list.id},${song.id})"><img  style="width: 16px;height: 16px;opacity: 0.4" src="<%=basePath%>images/delete.png"></a>
-                                        </div>
-                                    </td>
-                                    <td style="width: 40px" align="center"><a href="javascript:playSongid('${song.id}')"><img src="<%=basePath%>images/play2.png" style="width: 16px;height: 16px"></a> </td>
-                                    <td style="width: 250px"><span style="color:rgba(46,46,46,0.8);font-size: 12px;font-weight: bolder">&nbsp;<a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></span> </td>
-                                    <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 12px">
-                                        <div class="songtime">&nbsp;<fmt:formatNumber type="number" value="${song.duration/60}" maxFractionDigits="0"/>:${song.duration%60}</div>
-                                        <div class="image" hidden="hidden">
-                                            <%--改--%>
-                                            &nbsp;<a href="javascript:sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>&nbsp;
-                                            <%--<a href="#" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img src="<%=basePath%>images/collection.png"></a>&nbsp;--%>
-                                            <%--<a href="#" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img src="<%=basePath%>images/share01.png"></a>&nbsp;--%>
-                                            <a href="<%=resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%=basePath%>images/download01.png"></a>
-                                        </div>
-                                    </td>
-                                    <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/artist/singerhost.action?id=${song.singer.id}">${song.singer.name}</a></td>
-                                    <td style="width: 135px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/album.action?id=${song.album.id}">${song.album.name}</a></td>
-                                </tr>
-                            </c:forEach>
-                        </table>
+                                            </div>
+                                        </td>
+                                        <td style="width: 40px" align="center"><img src="<%=basePath%>images/play2.png" style="width: 16px;height: 16px"> </td>
+                                        <td style="width: 250px"><span style="color:rgba(46,46,46,0.8);font-size: 12px;font-weight: bolder">&nbsp;<a href="<%=basePath%>/song.action?id=${song.id}">${song.name}</a></span> </td>
+                                        <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 12px">
+                                            <div class="songtime">&nbsp;<fmt:formatNumber type="number" value="${song.duration/60}" maxFractionDigits="0"/>:${song.duration%60}</div>
+                                            <div class="image" hidden="hidden">
+                                                &nbsp;<a href="javascript:parent.sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>&nbsp;
+                                                <%--<a href="#"><img src="<%=basePath%>images/collection.png"></a>&nbsp;--%>
+                                                <%--<a href="#"><img src="<%=basePath%>images/share01.png"></a>&nbsp;--%>
+                                                <a href="<%=resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%=basePath%>images/download01.png"></a>
+                                            </div>
+                                        </td>
+                                        <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/artist/singerhost.action?id=${song.singer.id}">${song.singer.name}</a></td>
+                                        <td style="width: 135px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/album.action?id=${song.album.id}">${song.album.name}</a></td>
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                        </div>
                     </div>
-                </div>
 
-            </div><%--创建的歌单--%>
 
-        </c:if>
 
-        <c:if test="${s.count!=1}">
-            <div hidden id="${list.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
+                </div><%--创建的歌单--%>
+            </c:if>
+        </c:forEach><%--创建的歌单--%>
+
+        <c:forEach items="${likesonglist}" var="likelist">
+            <div hidden id="${likelist.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
+
                 <div style="width: 209px;height: 209px;border: 1px solid #e0e0e0;margin-top: 40px ">
-                    <c:if test="${not empty list.img}">
-                        <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=resourcesPath%>images/200songlist/${list.img}"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
-                    </c:if>
-                    <c:if test="${empty list.img}">
-                        <a  href="<%=basePath%>songlist/songlist.action?id=${list.id}"><img src="<%=basePath%>images/default.jpg"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
-                    </c:if>
+                    <a href="<%=basePath%>songlist/songlist.action?id=${likelist.id}"><img src="<%=resourcesPath%>images/200songlist/${likelist.img}"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
                 </div>
 
                 <div style="margin-top: -200px;margin-left: 230px">
                     <div style="background-color: #b90200;width: 40px" align="center"><span>歌单</span></div>
                 </div>
                 <div style="margin-left: 280px;margin-top: -25px">
-                    <a href="<%=basePath%>songlist/songlist.action?id=${list.id}"><span style="color: #0f0f0f;font-size: 20px">${list.name}</span></a>
+                    <a href="<%=basePath%>songlist/songlist.action?id=${likelist.id}"><span style="color: #0f0f0f;font-size: 20px">${likelist.name}</span></a>
                 </div>
                 <div  style="margin-top:20px;margin-left: 230px;">
-
-                    <a href="<%=basePath%>use/personalInformation.action"><img src="<%=resourcesPath%>/head/${sessionScope.user.img}" style="width: 36px;height: 36px"></a>
+                    <a href="personalInformation.action?id=${likelist.user.id}"><img src="<%=resourcesPath%>head/${likelist.user.img}" style="width: 36px;height: 36px"></a>
                     <div style="margin-left: 50px;margin-top: -30px">
-                        <a class="a" href="<%=basePath%>user/personalInformation.action"><span style="font-size: 12px;color: #5763ff">${sessionScope.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${list.createtime}" type="both"/> </span>
+                        <a class="a" href="personalInformation.action?id=${likelist.user.id}"><span style="font-size: 12px;color: #5763ff">${likelist.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${likelist.createtime}" type="both"/> </span>
                     </div>
                 </div>
                 <div style="margin-top: 30px;margin-left: 230px">
-                    <%--<a class="btn btn-default" href="#" role="button">播放</a>&nbsp;&nbsp;&nbsp;--%>
-                    <%--<a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/shareto.png" style="height: 16px;width: 16px">分享</a>&nbsp;&nbsp;&nbsp;--%>
-                    <%--<a class="btn btn-default" href="#" role="button"><img src="<%=basePath%>images/download.png" style="height: 16px;width: 16px">下载</a><br/>--%>
-                    <%--&nbsp;<br/>--%>
-                    <c:if test="${ not empty list.introduce}">
-                        <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${list.introduce}</span>
+
+                    <c:if test="${ not empty likelist.introduce}">
+                    <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${likelist.introduce}</span>
                     </c:if>
-                    <c:if test="${ empty list.introduce}">
+                    <c:if test="${ empty likelist.introduce}">
                         <span style="color:rgba(46,46,46,0.6);font-size: 12px">&nbsp;</span>
                     </c:if>
                 </div>
                 <div style="margin-left: 600px;margin-top: -135px">
-                    <a href="<%=basePath%>user/removesonglist.action?songlistId=${list.id}">删除</a>
+                    &nbsp;
                 </div>
                 <div style="margin-top: 220px">
                     <div>
                         <h2><span style="color:rgba(46,46,46,0.7)">歌曲列表</span></h2>
                         <div style="margin-top: -25px;margin-left: 130px">
-                            <span style="color:rgba(46,46,46,0.7);font-size: 12px"><span id="count${list.id}" >${fn:length(list.songs)}</span><span>首歌</span></span>
+                            <span style="color:rgba(46,46,46,0.7);font-size: 12px">${fn:length(likelist.songs)}<span></span>首歌</span>
                         </div>
                     </div>
                     <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
@@ -519,22 +617,16 @@
                         <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;专辑</span>
                     </div>
                     <div>
-                        <table id="tab${list.id}" class="table-hover">
-                            <c:forEach items="${list.songs}" var="song" varStatus="s">
+                        <table class="table-hover">
+                            <c:forEach items="${likelist.songs}" var="song" varStatus="s">
                                 <tr id="${song.id}" class="song" style="height: 40px" onmouseover="over(${song.id})" onmouseout="out(${song.id})">
-                                    <td style="width: 35px" align="right">
-                                        <div class="image" hidden="hidden">
-                                        <a title="删除" onclick="remove(${list.id},${song.id})"><img  style="width: 16px;height: 16px;opacity: 0.4" src="<%=basePath%>images/delete.png"></a>
-                                        </div>
-                                    </td>
+                                    <td style="width: 35px" align="right"><span style=";color:rgba(46,46,46,0.8)">${s.count}.</span></td>
                                     <td style="width: 40px" align="center"><img src="<%=basePath%>images/play2.png" style="width: 16px;height: 16px"> </td>
                                     <td style="width: 250px"><span style="color:rgba(46,46,46,0.8);font-size: 12px;font-weight: bolder">&nbsp;<a href="<%=basePath%>/song.action?id=${song.id}">${song.name}</a></span> </td>
                                     <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 12px">
                                         <div class="songtime">&nbsp;<fmt:formatNumber type="number" value="${song.duration/60}" maxFractionDigits="0"/>:${song.duration%60}</div>
-                                        <div class="image" hidden="hidden">
-                                            &nbsp;<a href="javascript:sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>&nbsp;
-                                            <%--<a href="#"><img src="<%=basePath%>images/collection.png"></a>&nbsp;--%>
-                                            <%--<a href="#"><img src="<%=basePath%>images/share01.png"></a>&nbsp;--%>
+                                        <div hidden class="image">
+                                            &nbsp;<a href="javascript:parent.sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>
                                             <a href="<%=resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%=basePath%>images/download01.png"></a>
                                         </div>
                                     </td>
@@ -545,111 +637,19 @@
                         </table>
                     </div>
                 </div>
+            </div><%--收藏的歌单--%>
+        </c:forEach><%--收藏的歌单--%>
 
 
+    </div>
 
-            </div><%--创建的歌单--%>
-        </c:if>
-    </c:forEach><%--创建的歌单--%>
+    <a name="gobottom">&nbsp;</a>
 
-    <c:forEach items="${likesonglist}" var="likelist">
-        <div hidden id="${likelist.id}" class="aaa" style="width: 720px;  margin-left: 280px;margin-top: 100px;">
-
-            <div style="width: 209px;height: 209px;border: 1px solid #e0e0e0;margin-top: 40px ">
-                <a href="<%=basePath%>songlist/songlist.action?id=${likelist.id}"><img src="<%=resourcesPath%>images/200songlist/${likelist.img}"  style="width: 200px;height: 200px;margin-top: 4px;margin-left: 4px"></a>
-            </div>
-
-            <div style="margin-top: -200px;margin-left: 230px">
-                <div style="background-color: #b90200;width: 40px" align="center"><span>歌单</span></div>
-            </div>
-            <div style="margin-left: 280px;margin-top: -25px">
-                <a href="<%=basePath%>songlist/songlist.action?id=${likelist.id}"><span style="color: #0f0f0f;font-size: 20px">${likelist.name}</span></a>
-            </div>
-            <div  style="margin-top:20px;margin-left: 230px;">
-                <a href="personalInformation.action?id=${likelist.user.id}"><img src="<%=resourcesPath%>head/${likelist.user.img}" style="width: 36px;height: 36px"></a>
-                <div style="margin-left: 50px;margin-top: -30px">
-                    <a class="a" href="personalInformation.action?id=${likelist.user.id}"><span style="font-size: 12px;color: #5763ff">${likelist.user.name}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span style="font-size: 12px;color: rgba(46,46,46,0.5)"><fmt:formatDate value="${likelist.createtime}" type="both"/> </span>
-                </div>
-            </div>
-            <div style="margin-top: 30px;margin-left: 230px">
-
-                <c:if test="${ not empty likelist.introduce}">
-                <span style="color:rgba(46,46,46,0.6);font-size: 12px">介绍:${likelist.introduce}</span>
-                </c:if>
-                <c:if test="${ empty likelist.introduce}">
-                    <span style="color:rgba(46,46,46,0.6);font-size: 12px">&nbsp;</span>
-                </c:if>
-            </div>
-            <div style="margin-left: 600px;margin-top: -135px">
-                &nbsp;
-            </div>
-            <div style="margin-top: 220px">
-                <div>
-                    <h2><span style="color:rgba(46,46,46,0.7)">歌曲列表</span></h2>
-                    <div style="margin-top: -25px;margin-left: 130px">
-                        <span style="color:rgba(46,46,46,0.7);font-size: 12px">${fn:length(likelist.songs)}<span></span>首歌</span>
-                    </div>
-                </div>
-                <div style="background-color: red; width: 680px;height: 2px;margin-top: 10px"></div>
-                <div style="height: 100px;width:680px;">
-                </div>
-            </div>
-
-            <div style="width: 720px;height:auto;margin-top: -100px">
-                <div style="width: 75px;height: 35px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                    <span></span>
-                </div>
-                <div style="width: 250px;height: 35px;margin-top: -35px;margin-left: 75px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0; ">
-                    <div style="height: 10px"></div>
-                    <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌曲标题</span>
-                </div>
-                <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:325px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                    <div style="height: 10px"></div>
-                    <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;时长</span>
-                </div>
-                <div style="width: 110px;height: 35px;margin-top: -35px;margin-left:435px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                    <div style="height: 10px"></div>
-                    <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;歌手</span>
-                </div>
-                <div style="width: 135px;height: 35px;margin-top: -35px;margin-left:545px;border-bottom: solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;">
-                    <div style="height: 10px"></div>
-                    <span style="color:rgba(46,46,46,0.7);font-size: 14px">&nbsp;专辑</span>
-                </div>
-                <div>
-                    <table class="table-hover">
-                        <c:forEach items="${likelist.songs}" var="song" varStatus="s">
-                            <tr id="${song.id}" class="song" style="height: 40px" onmouseover="over(${song.id})" onmouseout="out(${song.id})">
-                                <td style="width: 35px" align="right"><span style=";color:rgba(46,46,46,0.8)">${s.count}.</span></td>
-                                <td style="width: 40px" align="center"><img src="<%=basePath%>images/play2.png" style="width: 16px;height: 16px"> </td>
-                                <td style="width: 250px"><span style="color:rgba(46,46,46,0.8);font-size: 12px;font-weight: bolder">&nbsp;<a href="<%=basePath%>/song.action?id=${song.id}">${song.name}</a></span> </td>
-                                <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 12px">
-                                    <div class="songtime">&nbsp;<fmt:formatNumber type="number" value="${song.duration/60}" maxFractionDigits="0"/>:${song.duration%60}</div>
-                                    <div hidden class="image">
-                                        &nbsp;<a href="javascript:sendSongid('${song.id}')"><img src="<%=basePath%>images/plus01.png"></a>
-                                        <a href="<%=resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%=basePath%>images/download01.png"></a>
-                                    </div>
-                                </td>
-                                <td style="width: 110px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/artist/singerhost.action?id=${song.singer.id}">${song.singer.name}</a></td>
-                                <td style="width: 135px;color:rgba(46,46,46,0.8);font-size: 14px">&nbsp;<a href="<%=basePath%>/album.action?id=${song.album.id}">${song.album.name}</a></td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-                </div>
-            </div>
-        </div><%--收藏的歌单--%>
-    </c:forEach><%--收藏的歌单--%>
-
-
+    <div class="go">
+        <a title="返回顶部" class="top" href="#gotop"></a>
+        <a title="返回底部" class="bottom" href="#gobottom"></a>
+    </div>
 </div>
-
-<a name="gobottom">&nbsp;</a>
-
-<div class="go">
-    <a title="返回顶部" class="top" href="#gotop"></a>
-    <a title="返回底部" class="bottom" href="#gobottom"></a>
-</div>
-
 <script>
     function remove(val,data) {
         var songtab="#tab"+val;

@@ -106,7 +106,7 @@
     <p><em>发行时间：&nbsp;<fmt:formatDate value="${song.album.date}" pattern="yyyy-MM-dd"/></em></p>
 
     <p>
-        <a href="javascript:playSongid('${song.id}')"><img style="margin-top: 10px" src="<%= basePath%>main/img/7.jpg"></a>
+        <a href="javascript:parent.playSongid('${song.id}')"><img style="margin-top: 10px" src="<%= basePath%>main/img/7.jpg"></a>
         <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img style="margin-top: 13px;margin-left: 5px" src="<%= basePath%>main/img/9.jpg"></a>
         <a href="javascript:void(0)" id="ashare" data-toggle="modal" data-target="#myModal" onclick="sharesong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img style="margin-top: 14px;margin-left: 5px" src="<%= basePath%>main/img/8.jpg"></a>
         <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img style="margin-top: 13px;margin-left: 5px" src="<%= basePath%>main/img/6.jpg"></a>

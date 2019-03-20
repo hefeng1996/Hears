@@ -52,6 +52,13 @@ public class UserControl {
     @Autowired
     private PraiseService praiseService;
     /*登录等问题处理*/
+
+
+    @RequestMapping("/hear")
+    public void hear(){
+
+    }
+
     @RequestMapping(value = "/login.action",method = RequestMethod.POST)
     public void loginSuccess (HttpServletRequest request,HttpServletResponse response,String userName,String password,HttpSession session){
         User user=null;
@@ -78,13 +85,15 @@ public class UserControl {
             }
             session.setAttribute("user",user);
             try {
-                response.sendRedirect(request.getContextPath()+"/user/personalInformation.action");
+//                response.sendRedirect(request.getContextPath()+"/user/personalInformation.action");
+//                response.sendRedirect(request.getContextPath()+"/mainJsp/hear.jsp");
+                response.sendRedirect(request.getContextPath()+"/");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }else{
             try {
-                response.sendRedirect(request.getContextPath()+"/jsp/login.jsp?flag=2");
+                response.sendRedirect(request.getContextPath()+"/mainJsp/login.jsp?flag=2");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -95,7 +104,7 @@ public class UserControl {
     public void logout(HttpServletRequest request,HttpServletResponse response) throws IOException {
         HttpSession session=request.getSession(false);
         session.removeAttribute("user");
-        response.sendRedirect(request.getContextPath()+"/songlist/index.action");
+        response.sendRedirect(request.getContextPath()+"/mainJsp/hear.jsp");
     }
 
     /*注册用户名ajax查询*/
@@ -288,7 +297,7 @@ public class UserControl {
 
 
         try {
-            request.getRequestDispatcher("/jsp/personal.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/personal.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -379,7 +388,7 @@ public class UserControl {
 
 
         try {
-            request.getRequestDispatcher("/jsp/fans.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/fans.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -418,7 +427,7 @@ public class UserControl {
         request.setAttribute("attentions",attentions);
 
         try {
-            request.getRequestDispatcher("/jsp/concern.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/concern.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -469,7 +478,10 @@ public class UserControl {
     public  void mySongs(HttpSession session,HttpServletRequest request,HttpServletResponse response) throws IOException {
         User user= (User) session.getAttribute("user");
         if(user==null ){
-            response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+//            response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+            System.out.println(request.getContextPath());
+//            response.sendRedirect(request.getContextPath()+"/mainJsp/login.jsp");
+            response.sendRedirect("/mainJsp/login.jsp");
             return;
         }
         List<MySinger> mySingers=mySingerService.selectMySingerByUserId(user.getId());

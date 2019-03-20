@@ -87,7 +87,7 @@ public class SingerControl {
         request.setAttribute("similarsingers",similarsingers);
 
 //        request.setAttribute("albums",albums);
-        request.getRequestDispatcher("/singerhost/singerhost.jsp?id="+id).forward(request,response);
+        request.getRequestDispatcher("/mainJsp/singerhost.jsp?id="+id).forward(request,response);
     }
 
     @RequestMapping(value="singercollect.action")

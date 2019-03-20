@@ -57,7 +57,7 @@
     </style>
 </head>
 <body>
-
+<%--<input type="hidden" id="reload" value="${flag}">--%>
 <div class="container" style="height: 70px; width: 100%; margin: 0;padding: 0;">
     <nav class="nav menu menu--miranda" style="background-color:#000000;height: 70px;">
         <div class="row">
@@ -75,9 +75,30 @@
                 </form>
             </div>
             <div class="col-md-2" style="width: 70px;position: relative;left: 5%">
-				<span class="menu__item">
-				<a id="MainLogin" class="menu__link"><span>登录</span></a>
-				</span>
+                <c:if test="${empty sessionScope.user}">
+                    <span class="menu__item">
+                        <a id="MainLogin" class="menu__link"><span>登录</span></a>
+                    </span>
+                </c:if>
+                <c:if test="${not empty sessionScope.user}">
+                    <span>
+                        <a href="javascript:void(0)" id="MainImg"><img style="border-radius: 40px;width: 40px;height: 40px;top: 20px;display: inline;position: relative;" src="<%= resourcesPath%>head/${sessionScope.user.img}" ></a>
+                    </span>
+                    <span style="width: 20px"></span>
+                    <span class="menu__item">
+                        <a id="MainLogout" class="menu__link" href="javascript:void(0);"><span style="top: -35px;display: inline;position: relative;">退出</span></a>
+                    </span>
+
+                </c:if>
+
+                <%--<c:if test="${empty sessionScope.user}">--%>
+                    <%--<a href="#" class="menu__link" onclick="window.location = '<%= basePath%>jsp/login.jsp' " ><span>登录</span></a>--%>
+                <%--</c:if>--%>
+                <%--<c:if test="${not empty sessionScope.user}">--%>
+                    <%--<a href="javascript:void(0)" style="position:relative;top: 10px;width: 80px;"onclick="window.location ='<%=basePath%>user/personalInformation.action' " ><img style="border-radius: 40px;width: 40px;height: 40px;display: inline;" src="<%= resourcesPath%>head/${sessionScope.user.img}" ></a>--%>
+                    <%--<a href="#"  style="position:relative;top: 10px;width: 80px;color: #e3e3e3;margin-left: 10px" onclick="window.location ='<%=basePath%>user/logout.action'"><span>退出</span></a>--%>
+                <%--</c:if>--%>
+
             </div>
         </div>
 
@@ -153,9 +174,9 @@
         // 专辑图片错误时显示的图片
         defaultImg: 'img/mplayer_error.png',
         // 自动播放
-        autoPlay: true,
+        autoPlay: false,
         // 播放模式(0->顺序播放,1->单曲循环,2->随机播放,3->列表循环(默认))
-        playMode:0,
+        playMode:3,
         playList:0,
         playSong:0,
         // 当前歌词距离顶部的距离
@@ -165,7 +186,7 @@
         // 音量滑块改变事件名称
         volSlideEventName:'change',
         // 初始音量
-        defaultVolume:80
+        defaultVolume:100
     }, function () {
         // 绑定事件
         this.on('afterInit', function () {
@@ -260,36 +281,82 @@ jQuery(function () {
     });
     jQuery("#MainMyMusic").click(function () {
         // if(pre!==4){
-            var premain=ind[pre];
-            var nextmain=ind[4];
-            jQuery("#"+premain).removeClass("menu__item_current");
-            jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src","<%= basePath%>user/mysongs.action");
+        if(${empty sessionScope.user}){
+            alert("请先登录")
+        }
+        if(${not empty sessionScope.user}) {
+            var premain = ind[pre];
+            var nextmain = ind[4];
+            jQuery("#" + premain).removeClass("menu__item_current");
+            jQuery("#" + nextmain).addClass("menu__item_current");
+            $("#main_iframe").attr("src", "<%= basePath%>user/mysongs.action");
             console.log(pre);
-            pre=4;
+            pre = 4;
+        }
         // }
     });
     jQuery("#MainFriend").click(function () {
         // if(pre!==5){
-            var premain=ind[pre];
-            var nextmain=ind[5];
-            jQuery("#"+premain).removeClass("menu__item_current");
-            jQuery("#"+nextmain).addClass("menu__item_current");
-            $("#main_iframe").attr("src","<%= basePath%>friend/friendcircle.action");
+        if(${empty sessionScope.user}){
+            alert("请先登录")
+        }
+        if (${not empty sessionScope.user}) {
+            var premain = ind[pre];
+            var nextmain = ind[5];
+            jQuery("#" + premain).removeClass("menu__item_current");
+            jQuery("#" + nextmain).addClass("menu__item_current");
+            $("#main_iframe").attr("src", "<%= basePath%>friend/friendcircle.action");
             console.log(pre);
-            pre=5;
+            pre = 5;
+        }
         // }
     });
     jQuery("#MainLogin").click(function () {
         // $("#main_iframe").attr("src",contextPath+"/test/login");
-        window.parent.location.href="<%=basePath%>/login";
+        <%--window.parent.location.href="<%=basePath%>mainJsp/login.jsp";--%>
+        window.parent.location.href="<%=basePath%>mainJsp/login.jsp";
+        //
+        <%--$("#main_iframe").attr("src","<%=basePath%>mainJsp/login.jsp");--%>
         // $("#main_iframe").attr("src",);
+    });
+    jQuery("#MainImg").click(function () {
+        // if(pre!==5){
+        // var premain=ind[pre];
+        // var nextmain=ind[5];
+        // jQuery("#"+premain).removeClass("menu__item_current");
+        // jQuery("#"+nextmain).addClass("menu__item_current");
+        $("#main_iframe").attr("src","<%=basePath%>user/personalInformation.action");
+        // console.log(pre);
+        // pre=5;
+        // }
+    });
+    jQuery("#MainLogout").click(function () {
+        // if(pre!==5){
+        // var premain=ind[pre];
+        // var nextmain=ind[5];
+        // jQuery("#"+premain).removeClass("menu__item_current");
+        // jQuery("#"+nextmain).addClass("menu__item_current");
+        <%--$("#main_iframe").attr("src","<%=basePath%>user/logout.action");--%>
+        window.parent.location.href="<%=basePath%>user/logout.action";
+        // console.log(pre);
+        // pre=5;
+        // }
     });
 
 });
-
-
-
 </script>
+<%--<script>--%>
+    <%--$(function () {--%>
+        <%--// var flag =request.getParameter("flag");--%>
+        <%--// if($("#reload").val()==1){--%>
+        <%--var flag=${param.flag};--%>
+        <%--if(flag==222){--%>
+            <%--parent.location.reload();--%>
+        <%--}--%>
+
+        <%--// }--%>
+    <%--})--%>
+<%--</script>--%>
+
 </body>
 </html>

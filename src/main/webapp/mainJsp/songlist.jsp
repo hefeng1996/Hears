@@ -139,12 +139,12 @@
             <c:forEach items="${song}" var="song" varStatus="s">
                 <tr style="border-right: solid 1px #cccccc;border-left: solid 1px #cccccc;height: 35px">
                     <td><span style="margin: 20px">${s.count}</span></td>
-                    <td><a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a></td>
+                    <td><a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a></td>
                     <td><a href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                     <td style="position: relative;"><span class="songtime">${song.time}</span>
 
                         <div class="songtimebg" id="songtimebg">
-                            <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                            <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                             <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img src="<%= basePath%>singerhost/shimg/collect01.png"/></a>
                             <a href="javascript:void(0)" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img src="<%= basePath%>singerhost/shimg/share01.png"/></a>
                             <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>

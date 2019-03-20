@@ -55,6 +55,7 @@ public class SonglistControl {
         request.setAttribute("morningSonglist",songlistService.morningSonglist());
         request.getRequestDispatcher("/mainJsp/index.jsp").forward(request,response);
     }
+
     @RequestMapping(value = "hear.action")
     public void hear(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

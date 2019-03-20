@@ -30,7 +30,7 @@ public class AlbumControl {
         request.setAttribute("comments",albumCommentService.selectCommentsByAlbumId(id));
         request.setAttribute("album",albumService.selectAlbumById(id));
         request.setAttribute("song",songService.selectSongByAlbumId(id));
-        request.getRequestDispatcher("/main/album.jsp?id="+id).forward(request,response);
+        request.getRequestDispatcher("/mainJsp/album.jsp?id="+id).forward(request,response);
     }
     @RequestMapping(value = "addalbumcomment.action")
     public void addsongcomment(HttpSession session, HttpServletRequest request, HttpServletResponse response, Integer albumid, String content) throws ServletException, IOException {

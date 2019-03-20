@@ -195,7 +195,7 @@
 </head>
 <body style="background-color: #f5f5f5;">
 <div>
-    <div id="content">
+    <div id="content" style="width:1000px;margin:0 auto;">
         <span style="font-family: '微软雅黑';font-size: 20px;">
 						动态
 					</span>

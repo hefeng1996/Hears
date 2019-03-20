@@ -554,7 +554,7 @@
                     <tr class="tabletr">
                         <!--序号和播放图标-->
                         <td class="tdplay">
-                            <%--<a href="javascript:sendSongid('${song.id}')" class="play"><img class="plyimg" id="playimg" src="<%= basePath%>img/play1.png"/> </a>--%>
+                            <a href="javascript:parent.sendSongid('${song.id}')" class="play"><img class="plyimg" id="playimg" src="<%= basePath%>img/play1.png"/> </a>
                         </td>
                         <!--歌曲名-->
                         <td class="td-songname">

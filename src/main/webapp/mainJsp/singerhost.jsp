@@ -105,34 +105,7 @@
 
 <body style="background-color: #f5f5f5">
 <!--导航-->
-<div class="container" style="height: 70px; width: 100%;position:relative;padding-left:0;padding-right:0;">
-    <nav class="nav menu menu--miranda" style="background-color:#000000;height: 70px;width: 100%;position:relative;left:0;" >
-        <img href="#"  id="logo" src="<%= basePath%>singerhost/navimg/logo.png"></img>
-        <ul class="menu__list" id="ul">
-            <li class="menu__item" style="margin-left: 1px"><a href="#" class="menu__link"onclick="window.location = '<%= basePath%>songlist/index.action'">推荐</a></li>
-            <li class="menu__item" style="margin-left: 1px"><a class="menu__link"onclick="window.location = '<%= basePath%>bangdan.action' " href="javascript:void(0) ">排行榜</a></li>
-            <li class="menu__item" style="margin-left: 1px"><a class="menu__link"onclick="window.location = '<%= basePath%>songlist/huayu.action?id=31' " href="javascript:void(0)">歌单</a></li>
-            <li class="menu__item menu__item--current" style="margin-left: 1px"><a href="#" class="menu__link"onclick="window.location = '<%= basePath%>artist/recommendsinger.action' " >歌手</a></li>
-            <li class="menu__item" style="margin-left: 1px"><a href="#" class="menu__link" onclick="window.location = '<%= basePath%>user/mysongs.action'">我的音乐</a></li>
-            <li class="menu__item" style="margin-left: 1px"><a href="#" class="menu__link"onclick="window.location='<%= basePath%>friend/friendcircle.action'">朋友</a></li>
-            <div class="search d7">
-                <form action="<%=basePath%>search/searchall.action" method="get">
-                    <input type="text" placeholder="Hear..." name="content">
-                    <button type="submit"><img src="<%= basePath%>main/img/1.jpg"/></button>
-                </form>
-            </div>
-            <li class="menu__item" style="margin-left: -15px">
-                <c:if test="${empty sessionScope.user}">
-                    <a href="#" class="menu__link" onclick="window.location = '<%= basePath%>jsp/login.jsp' " >登录</a>
-                </c:if>
-                <c:if test="${not empty sessionScope.user}">
-                    <a href="javascript:void(0)" style="position:relative;top: 10px;width: 80px;"onclick="window.location ='<%=basePath%>user/personalInformation.action' " ><img style="border-radius: 40px;width: 40px;height: 40px;display: inline;" src="<%= imgPath%>head/${sessionScope.user.img}" ></a>
-                    <a href="#"  style="position:relative;top: 10px;width: 80px;color: #e3e3e3;margin-left: 10px" onclick="window.location ='<%=basePath%>user/logout.action'">退出</a>
-                </c:if>
-            </li>
-        </ul>
-    </nav>
-</div>
+
 <script type="text/javascript" src="<%= basePath%>singerhost/Scripts/jquery.min.js"></script>
 <script type="text/javascript">
     //tab切换
@@ -214,7 +187,7 @@
                                 <td class="w1">
                                     <span>${s.count}</span>
                                     <%--<%= basePath%>songplay.action?id=${song.id}--%>
-                                    <a href="javascript:playSongid('${song.id}')" class="ply"><img class="plyimg" id="playimg" src="<%= basePath%>singerhost/shimg/play1.png"/> </a>
+                                    <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" id="playimg" src="<%= basePath%>singerhost/shimg/play1.png"/> </a>
                                 </td>
                                 <!--歌曲名-->
                                 <td style="width: 309px">
@@ -225,7 +198,7 @@
                                     <span class="songtime">${song.time}</span>
 
                                     <div class="songtimebg" id="songtimebg">
-                                        <a href="javascript:sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
+                                        <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                         <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${singerhost.id}')"><img src="<%= basePath%>singerhost/shimg/collect01.png"/></a>
                                         <a href="javascript:void(0)" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${singerhost.id}','${singerhost.name}')"><img src="<%= basePath%>singerhost/shimg/share01.png"/></a>
                                         <a href="<%= imgPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
