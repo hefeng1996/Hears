@@ -174,7 +174,7 @@
             </div>
 
 
-            <a  href="<%=basePath%>jsp/informationEditing.jsp">
+            <a  href="<%=basePath%>mainJsp/informationEditing.jsp">
                 <div id="changeimg" class="changeimg">
                     <span id="font" class="font">更换头像</span>
                 </div>

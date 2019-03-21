@@ -103,7 +103,7 @@
             </div>
             <c:if test="${sessionScope.user.id==requestScope.id||requestScope.id==null}">
                 <div style="width: 120px;height: 50px; position: absolute;margin-left: 540px;margin-top: -45px">
-                    <a href="<%=basePath%>jsp/informationEditing.jsp">
+                    <a href="<%=basePath%>mainJsp/informationEditing.jsp">
                         <input class="btn btn-default" id="modify" type="button" value="编辑个人信息"></a>
                 </div>
             </c:if>

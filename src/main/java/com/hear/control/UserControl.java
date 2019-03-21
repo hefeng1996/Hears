@@ -139,7 +139,8 @@ public class UserControl {
             }
         }else{
             try {
-                response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+//                response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+                response.sendRedirect(request.getContextPath()+"/");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -156,7 +157,7 @@ public class UserControl {
 
         request.setAttribute("userTags",userTags);
         try {
-            request.getRequestDispatcher("/jsp/informationEditing.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/informationEditing.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -169,7 +170,9 @@ public class UserControl {
     public void updateMessage(String [] checkbox,String usercity,String userprovince,String P1,String C1,String nicheng, String introduce, String sex, String tel, String birthday, MultipartFile imgup, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws ParseException {
         User user=null;
         user= (User) session.getAttribute("user");
-        user.setNicheng(nicheng);
+        if(nicheng!=null) {
+            user.setNicheng(nicheng);
+        }
         if("男".equals(sex)){
             user.setSex(1);
         }else if("女".equals(sex)){
@@ -222,7 +225,8 @@ public class UserControl {
             }
         }else{
             try {
-                response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+//                response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+                response.sendRedirect(request.getContextPath()+"/");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -237,13 +241,15 @@ public class UserControl {
         if (flag) {
             try {
                 session.removeAttribute("user");
-                response.sendRedirect(request.getContextPath()+("/jsp/login.jsp"));
+//                response.sendRedirect(request.getContextPath()+("/mainJsp/login.jsp"));
+//                response.sendRedirect(request.getContextPath()+("/"));
+                response.sendRedirect(request.getContextPath()+("/?flag=2"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
             try {
-                response.sendRedirect(request.getContextPath()+("/jsp/login.jsp"));
+                response.sendRedirect(request.getContextPath()+("/"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

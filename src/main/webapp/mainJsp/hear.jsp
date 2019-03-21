@@ -319,24 +319,24 @@ jQuery(function () {
         <%--$("#main_iframe").attr("src","<%=basePath%>mainJsp/login.jsp");--%>
         // $("#main_iframe").attr("src",);
     });
-    jQuery("#MainImg").click(function () {
+    jQuery("#MainSerach").click(function () {
 
         var content = document.getElementById("content").value;
 
         $("#main_iframe").attr("src","<%=basePath%>search/searchall.action?content="+content);
 
     });
-    <%--jQuery("#MainSerach").click(function () {--%>
-        <%--// if(pre!==5){--%>
-        <%--// var premain=ind[pre];--%>
-        <%--// var nextmain=ind[5];--%>
-        <%--// jQuery("#"+premain).removeClass("menu__item_current");--%>
-        <%--// jQuery("#"+nextmain).addClass("menu__item_current");--%>
-        <%--$("#main_iframe").attr("src","<%=basePath%>user/personalInformation.action");--%>
-        <%--// console.log(pre);--%>
-        <%--// pre=5;--%>
-        <%--// }--%>
-    <%--});--%>
+    jQuery("#MainImg").click(function () {
+        // if(pre!==5){
+        // var premain=ind[pre];
+        // var nextmain=ind[5];
+        // jQuery("#"+premain).removeClass("menu__item_current");
+        // jQuery("#"+nextmain).addClass("menu__item_current");
+        $("#main_iframe").attr("src","<%=basePath%>user/personalInformation.action");
+        // console.log(pre);
+        // pre=5;
+        // }
+    });
     jQuery("#MainLogout").click(function () {
         // if(pre!==5){
         // var premain=ind[pre];
@@ -352,18 +352,18 @@ jQuery(function () {
 
 });
 </script>
-<%--<script>--%>
-    <%--$(function () {--%>
-        <%--// var flag =request.getParameter("flag");--%>
-        <%--// if($("#reload").val()==1){--%>
-        <%--var flag=${param.flag};--%>
-        <%--if(flag==222){--%>
-            <%--parent.location.reload();--%>
-        <%--}--%>
+<script>
+    $(function () {
+        // var flag =request.getParameter("flag");
+        // if($("#reload").val()==1){
+        var flag=${param.flag};
+        if(flag==2){
+            parent.location.reload();
+        }
 
-        <%--// }--%>
-    <%--})--%>
-<%--</script>--%>
+        // }
+    })
+</script>
 
 </body>
 </html>
