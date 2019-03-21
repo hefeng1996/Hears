@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface SongMapper {
-    public List<Song> selectSongBySingerId(int id);
+//    public List<Song> selectSongBySingerId(int id);
     public List<Song> newSong();//新歌榜
     public List<Song> hotSong();//热歌榜
     public List<Song> mySong();//原创榜

@@ -125,14 +125,21 @@
                         <td style="width: 190px; font-size: large;">时长</td>
                         <td style="width: 180px; font-size: large;">歌手</td>
                     </tr>
-                    <c:forEach items="${hotSong}" var="song" varStatus="s" begin="24" end="33">
+                    <c:forEach items="${hotSong}" var="song" varStatus="s" begin="0" end="9">
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>
                                 <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><img src="<%= basePath%>main/pic/59.jpg"/><a href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td style="position: relative;">
                                     <span class="songtime"> ${song.time}</span>
-                                    <div class="songtimebg" id="songtimebg">
+
+                                    <%--<c:if test="${s.count==1}">--%>
+                                        <%--<div class="songtimebg" id="songtimebg" style="top: 18px;">--%>
+                                    <%--</c:if>--%>
+                                    <%--<c:if test="${s.count!=1}">--%>
+                                        <%--<div class="songtimebg" id="songtimebg">--%>
+                                     <%--</c:if>--%>
+                                    <div class="songtimebg" id="songtimebg" style="top: 18px;">
                                         <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                         <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" onclick="collectSong('${song.id}','${song.singer.id}')"><img src="<%= basePath%>singerhost/shimg/collect01.png"/></a>
                                         <a href="javascript:void(0)" id="ashare" data-toggle="modal" data-target="#myModal" onclick="shareSong('${song.id}','${song.name}','${song.singer.id}','${song.singer.name}')"><img src="<%= basePath%>singerhost/shimg/share01.png"/></a>
@@ -178,7 +185,7 @@
                         <td style="width: 190px; font-size: large;">时长</td>
                         <td style="width: 180px; font-size: large;">歌手</td>
                     </tr>
-                    <c:forEach items="${newSong}" var="song" varStatus="s" begin="34" end="43">
+                    <c:forEach items="${newSong}" var="song" varStatus="s" begin="0" end="9">
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>
@@ -229,7 +236,7 @@
                         <td style="width: 190px; font-size: large;">时长</td>
                         <td style="width: 180px; font-size: large;">歌手</td>
                     </tr>
-                    <c:forEach items="${mySong}" var="song" varStatus="s" begin="44" end="53">
+                    <c:forEach items="${mySong}" var="song" varStatus="s" begin="0" end="9">
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>

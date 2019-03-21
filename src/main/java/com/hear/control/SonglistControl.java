@@ -60,9 +60,12 @@ public class SonglistControl {
     public void hear(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setAttribute("hotSong",songService.hotSong());
-        request.setAttribute("newSong",songService.newSong());
-        request.setAttribute("mySong",songService.mySong());
-
+        List<Song> newSongs = songService.newSong();
+        request.setAttribute("newSong", newSongs);
+//        System.out.println("sss:"+songService.newSong());
+        List<Song> mySongs = songService.mySong();
+        request.setAttribute("mySong", mySongs);
+//        System.out.println("sss:"+songService.mySong());
         request.setAttribute("myslist2",singerService.selectMySinger2());
 
         request.setAttribute("newalbum",albumService.selectAlbum());

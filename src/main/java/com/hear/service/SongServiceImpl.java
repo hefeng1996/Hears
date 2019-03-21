@@ -114,10 +114,10 @@ public class SongServiceImpl implements SongService {
         }
         return null;
     }
-    @Override
-    public List<Song> selectSongBySingerId(int id) {
-        return songMapper.selectSongBySingerId(id);
-    }
+//    @Override
+//    public List<Song> selectSongBySingerId(int id) {
+//        return songMapper.selectSongBySingerId(id);
+//    }
 
     @Override
     public List<Song> selectSongBySonglistId(int id) {

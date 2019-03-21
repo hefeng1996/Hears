@@ -147,11 +147,11 @@
     <div class="mp-list-box">
         <ul class="mp-list-title"></ul>
         <table class="mp-list-table">
-            <thead>
+            <thead >
             <tr>
-                <th>歌名</th>
-                <th>歌手</th>
-                <th>时长</th>
+                <th style="text-align: center">歌名</th>
+                <th style="text-align: center">歌手</th>
+                <th style="text-align: center">时长</th>
             </tr>
             </thead>
             <tbody class="mp-list"></tbody>
@@ -186,7 +186,7 @@
         // 音量滑块改变事件名称
         volSlideEventName:'change',
         // 初始音量
-        defaultVolume:100
+        defaultVolume:80
     }, function () {
         // 绑定事件
         this.on('afterInit', function () {

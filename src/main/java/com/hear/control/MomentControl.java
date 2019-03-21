@@ -39,7 +39,7 @@ public class MomentControl {
         User user= (User) session.getAttribute("user");
 
         if (user==null){
-            response.sendRedirect(request.getContextPath()+"/jsp/login.jsp");
+            response.sendRedirect(request.getContextPath()+"/mainJsp/hear.jsp?flag=2");
         }
         else{
             Map<String,Object> map=new HashMap<>();

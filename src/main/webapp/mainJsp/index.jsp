@@ -273,7 +273,7 @@
                 </tr>
             </table>
             <table  id="tab2" class="tab2" style="width:309px; height: 400px;border: 1px solid #d2d2d2; float: left;">
-                <c:forEach items="${newSong}" var="song" begin="210" end="219" varStatus="s">
+                <c:forEach items="${newSong}" var="song" begin="0" end="9" varStatus="s">
                     <tr >
                         <c:if test="${s.count<4}" >
                             <td class="td"  style="color: red;">${s.count}</td>
@@ -305,7 +305,7 @@
                 </tr>
             </table>
             <table  id="tab3" class="tab2" style="width:309px; height: 400px;border: 1px solid #d2d2d2;">
-                <c:forEach items="${mySong}" var="song" begin="120" end="129" varStatus="s">
+                <c:forEach items="${mySong}" var="song" begin="0" end="9" varStatus="s">
                     <tr >
                         <c:if test="${s.count<4}" >
                             <td class="td"  style="color: red;">${s.count}</td>
@@ -322,12 +322,23 @@
                             <td class="td"  style="color: black;">${s.count}</td>
                             <td>
                                 <a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>
+                                <div class="songtimebg" id="songtimebg">
                                     <a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>
                                     <a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>
                                     <a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>
                                 </div>
                             </td>
                         </c:if>
+                        <%--<c:if test="${s.count>3}">--%>
+                            <%--<td class="td"  style="color: black;">${s.count}</td>--%>
+                            <%--<td>--%>
+                                <%--<a href="<%=basePath%>/song.action?id=${song.id}" class="songtime">${song.name}</a>--%>
+                                    <%--<a href="javascript:parent.playSongid('${song.id}')" class="ply"><img class="plyimg" src="<%= basePath%>singerhost/shimg/play1.png"/></a>--%>
+                                    <%--<a href="javascript:parent.sendSongid('${song.id}')"><img src="<%= basePath%>singerhost/shimg/plus01.png"/></a>--%>
+                                    <%--<a href="<%= resourcesPath%>song/${song.url}" download="${song.name}"><img src="<%= basePath%>singerhost/shimg/download01.png"/></a>--%>
+                                <%--</div>--%>
+                            <%--</td>--%>
+                        <%--</c:if>--%>
                     </tr>
                 </c:forEach>
                 <tr>
