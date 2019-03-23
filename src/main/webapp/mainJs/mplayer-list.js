@@ -269,8 +269,19 @@ function sendSongid(id) {
 			obj["singer"]=song.singer.name;
 			obj["img"]=hearPath()+"/images/200album/"+song.album.img;
 			obj["src"]=hearPath()+"/song/"+song.url;
-			obj["lrc"]=song.lrc;
-			obj["duration"] = song.duration;
+			obj["lrc"]=song.lyrics;
+			// obj["duration"] = song.duration;
+			var duration = song.duration;
+
+			var fen = parseInt(duration/60);
+			var miao = duration%60;
+			if(miao<10){
+				var s='0'+miao;
+				obj["time"] = '0' + fen + ":" + s;
+			}else {
+				obj["time"] = '0' + fen + ":" + miao;
+			}
+			// song.time;
 			var s=JSON.stringify(obj);
 			mplayer_song.push(obj);
 			var count = getJsonObjLength(mplayer_song);
@@ -292,7 +303,16 @@ function playSongid(id) {
 			obj["img"]=hearPath()+"/images/200album/"+song.album.img;
 			obj["src"]=hearPath()+"/song/"+song.url;
 			obj["lrc"]=song.lyrics;
-			// obj["duration"] = song.duration;
+			var duration = song.duration;
+
+			var fen = parseInt(duration/60);
+			var miao = duration%60;
+			if(miao<10){
+				var s='0'+miao;
+				obj["time"] = '0' + fen + ":" + s;
+			}else {
+				obj["time"] = '0' + fen + ":" + miao;
+			}
 			var s=JSON.stringify(obj);
 			mplayer_song.push(obj);
 			var count = getJsonObjLength(mplayer_song);

@@ -133,7 +133,8 @@ public class UserControl {
             try {
                 User u=userService.userLogin(username);
                 session.setAttribute("user",u);
-                response.sendRedirect(request.getContextPath()+"/user/tag.action");
+//                response.sendRedirect(request.getContextPath()+"/user/tag.action");
+                response.sendRedirect(request.getContextPath()+"/");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -158,6 +159,7 @@ public class UserControl {
         request.setAttribute("userTags",userTags);
         try {
             request.getRequestDispatcher("/mainJsp/informationEditing.jsp").forward(request,response);
+//            request.getRequestDispatcher("/mainJsp/informationEditing.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -22,15 +22,25 @@ public class Song {
     private String lyrics;
     private Integer isvip;
     private Integer quality;
+
+
     private String time;
 
     public String getTime() {
         if (this.duration!=null) {
-            return this.duration / 60 + ":" + this.duration %60 ;
+            if(duration%60<10){
+                return "0"+this.duration / 60 + ":" + "0" + this.duration %60 ;
+            }
+
+            return "0"+this.duration / 60 + ":" + this.duration %60 ;
         }else{
-            return "0:00";
+            return "00:00";
         }
     }
+    public void setTime() {
+        this.time = getTime();
+    }
+
 
     public Song() {
     }

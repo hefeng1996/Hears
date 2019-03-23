@@ -38,7 +38,8 @@ public class SongControl {
             String path="D:\\Hear\\lyrics\\"+songInfo.getLyrics();
             List<Map<String, String>> list = songService.parse(path);
             String s=songService.printLrc2(list);
-
+            System.out.println(songInfo.getDuration());
+            songInfo.setTime();
             songInfo.setLyrics(s);
             JSONObject ja = JSONObject.fromObject(songInfo);
             return ja.toString();

@@ -156,7 +156,7 @@
 
 <a name="gotop">&nbsp;</a>
 
-<div style="height: auto;width: 1000px;margin-left:180px;border: 1px solid #e0e0e0;background-color: #FCFCFC">
+<div style="height: auto;width: 1000px;margin:0 auto;border: 1px solid #e0e0e0;background-color: #FCFCFC">
     <div style="height: auto;width: auto;margin-left:50px">
         <div style="margin-left: 25px;margin-top: 30px"><h3><span>资料设置</span></h3></div>
         <div style="height: auto;width: auto;margin-left: 125px; margin-top: 30px">

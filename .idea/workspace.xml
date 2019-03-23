@@ -7,21 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e29e64d-663f-4a1e-856f-f84ab30007d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/control/MomentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/control/MomentControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/dao/SongMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/dao/SongMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/service/SongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/service/SongService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/service/SongServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/service/SongServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hear/entity/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hear/entity/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJs/mplayer-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJs/mplayer-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/AllControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/AllControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/UserControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/UserControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/MomentControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/MomentControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/SongControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/SongControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/SonglistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/control/SonglistControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/dao/SongMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/dao/SongMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/dao/SongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/dao/SongMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/entity/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/entity/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/service/SongService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/service/SongService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/service/SongServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/WEB-INF/classes/com/hear/service/SongServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Hear/mainJsp/hear.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Hear/mainJsp/hear.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/control/AllControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/control/AllControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/control/UserControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/control/UserControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/control/MomentControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/control/MomentControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/control/SongControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/control/SongControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/control/SonglistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/control/SonglistControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/dao/SongMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/dao/SongMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/dao/SongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/dao/SongMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/entity/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/entity/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/service/SongService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/service/SongService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hear/service/SongServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hear/service/SongServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,67 +49,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="188" column="24" lean-forward="true" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/mplayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="474" column="31" selection-start-line="474" selection-start-column="27" selection-end-line="474" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/mplayer-list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="272" column="44" selection-start-line="272" selection-start-column="44" selection-end-line="272" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/entity/Song.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="495">
+              <caret line="248" column="55" selection-start-line="248" selection-start-column="47" selection-end-line="248" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="303" column="30" lean-forward="true" selection-start-line="303" selection-start-column="30" selection-end-line="303" selection-end-column="30" />
               <folding>
-                <element signature="method#searchSonglist#0;class#SonglistControl#0" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/singerhost/playerjs/mplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="330" column="31" selection-start-line="330" selection-start-column="31" selection-end-line="330" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="7730">
+              <caret line="714" column="18" selection-start-line="714" selection-start-column="11" selection-end-line="714" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -102,49 +81,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="59" column="54" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="75" column="120" lean-forward="true" selection-start-line="75" selection-start-column="120" selection-end-line="75" selection-end-column="120" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/search.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="434" column="27" lean-forward="true" selection-start-line="434" selection-start-column="27" selection-end-line="434" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="135" column="67" lean-forward="true" selection-start-line="135" selection-start-column="71" selection-end-line="140" selection-end-column="48" />
+            <state relative-caret-position="304">
+              <caret line="186" column="30" lean-forward="true" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#11805#13527#0#JSP" />
-                <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#13552#15190#0#JSP" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/huayu.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="178" column="19" lean-forward="true" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="254" column="2" lean-forward="true" selection-start-line="254" selection-start-column="2" selection-end-line="254" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="160" column="69" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="69" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -158,10 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>singerhost/shimg/play1.png</find>
-      <find>cancelsingercollect</find>
-      <find>javascript:playsongid</find>
-      <find>/attention.action&quot;</find>
       <find>gobottom</find>
       <find>collectsongs</find>
       <find>login.action</find>
@@ -176,18 +166,22 @@
       <find>searchallfriend</find>
       <find>addComment</find>
       <find>deleteMoment.action</find>
-      <find>recommendsinger</find>
       <find>singerhost</find>
       <find>singercollect.action</find>
       <find>index.action</find>
       <find>public</find>
       <find>/index.action</find>
       <find>songlistCollected</find>
-      <find>songlist.action</find>
       <find>bangdan.action&quot;</find>
       <find>.songtimebg</find>
       <find>songplay.</find>
+      <find>recommendsinger</find>
+      <find>index.action&quot;</find>
       <find>songplay.action</find>
+      <find>getAlbumSongMap</find>
+      <find>register.action</find>
+      <find>songlist.action</find>
+      <find>tag.ac</find>
     </findStrings>
     <replaceStrings>
       <replace>com.he.Hear.dao</replace>
@@ -201,9 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/he/Hear/dao/TagMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/he/Hear/dao/UserTagMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/he/Hear/dao/MySonglistMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/he/Hear/dao/AdminMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/he/Hear/dao/AlbumCommentMapper.xml" />
@@ -217,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/main/bangdan.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/huayu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/main/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/singerhost/navcss/tab.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/singerlist/files/singerlist/styles.css" />
@@ -228,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/friendcircle.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/control/SingerControl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/singerhost.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/song.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/mysongs.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/control/AlbumControl.java" />
@@ -239,19 +228,24 @@
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/personalDynamics.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/fans.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/personal.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/control/MomentControl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/dao/SongMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/service/SongService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hear/service/SongServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hear/entity/Song.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/mainJs/mplayer-list.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp" />
       </list>
     </option>
   </component>
@@ -271,9 +265,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="197" />
-    <option name="y" value="33" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="318" />
+    <option name="y" value="66" />
     <option name="width" value="1429" />
     <option name="height" value="963" />
   </component>
@@ -284,6 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -395,6 +390,16 @@
               <item name="Hear" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hear" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hear" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hear" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,6 +425,23 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="mainJsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hear" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hear" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="singerhost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hear" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hear" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="singerhost" type="462c0819:PsiDirectoryNode" />
+              <item name="playerjs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Hear" type="b2602c69:ProjectViewProjectNode" />
@@ -529,13 +551,12 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553174101525" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553330865759" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -545,16 +566,16 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\305\Hear\src\main\resources\com\he\Hear\dao" />
+      <recent name="D:\Code\305\Hear\src\main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\305\Hear\src\main\webapp\mainJsp" />
       <recent name="D:\Code\305\Hear\src\main\webapp\mainCss" />
       <recent name="D:\Code\305\Hear\src\main\webapp\mainJs" />
       <recent name="D:\Code\305\Hear\src\main\webapp\img" />
       <recent name="D:\Code\305\Hear\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\305\Hear\src\main\resources\com\he\Hear\dao" />
-      <recent name="D:\Code\305\Hear\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -673,7 +694,9 @@
       <workItem from="1552653597634" duration="659000" />
       <workItem from="1553051141318" duration="6001000" />
       <workItem from="1553060130918" duration="16881000" />
-      <workItem from="1553139453355" duration="14035000" />
+      <workItem from="1553139453355" duration="14295000" />
+      <workItem from="1553223320474" duration="6090000" />
+      <workItem from="1553308767854" duration="8740000" />
     </task>
     <task id="LOCAL-00001" summary="整合">
       <created>1552211358249</created>
@@ -717,17 +740,24 @@
       <option name="project" value="LOCAL" />
       <updated>1553155173440</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修改">
+      <created>1553174283250</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1553174283251</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84876000" />
+    <option name="totallyTimeSpent" value="99966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="318" y="66" width="1429" height="963" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17217484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24251278" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -737,8 +767,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.55531454" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.17136659" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3172497" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.19059107" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -772,46 +802,22 @@
     <MESSAGE value="跳转基本完成改造" />
     <MESSAGE value="搜索跳转改造" />
     <MESSAGE value="更改密码跳转" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改密码跳转" />
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/singerlist/images/singerlist/入驻歌手分割线_u5_line.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/singerlist/files/singerlist/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/singerhost/singerhost.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../he/毕设/repository/org/springframework/spring-web/5.0.1.RELEASE/spring-web-5.0.1.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../he/毕设/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/Cookie.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/WarningServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -950,24 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="233" column="4" lean-forward="true" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/RelationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6954">
-          <caret line="366" column="37" selection-start-line="366" selection-start-column="37" selection-end-line="366" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1009,18 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="315" column="58" selection-start-line="315" selection-start-column="44" selection-end-line="315" selection-end-column="58" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/AdminControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -1052,51 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SingerControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="92" column="47" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/dao/SongMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/SongServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
-          <folding>
-            <element signature="e#4341#4342#0" expanded="true" />
-            <element signature="e#4401#4402#0" expanded="true" />
-            <element signature="e#4581#4582#0" expanded="true" />
-            <element signature="e#4633#4634#0" expanded="true" />
-            <element signature="e#4792#4793#0" expanded="true" />
-            <element signature="e#4835#4836#0" expanded="true" />
-            <element signature="e#4884#4885#0" expanded="true" />
-            <element signature="e#4927#4928#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/TagService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1104,104 +1039,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/SongService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/mplayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="method#searchSonglist#0;class#SonglistControl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="330" column="31" selection-start-line="330" selection-start-column="31" selection-end-line="330" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="59" column="54" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="54" />
+        <state relative-caret-position="9006">
+          <caret line="474" column="31" selection-start-line="474" selection-start-column="27" selection-end-line="474" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="434" column="27" lean-forward="true" selection-start-line="434" selection-start-column="27" selection-end-line="434" selection-end-column="27" />
+        <state relative-caret-position="8246">
+          <caret line="434" column="27" selection-start-line="434" selection-start-column="27" selection-end-line="434" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/singerlist.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="135" column="67" lean-forward="true" selection-start-line="135" selection-start-column="71" selection-end-line="140" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11805#13527#0#JSP" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13552#15190#0#JSP" />
-          </folding>
+        <state relative-caret-position="3306">
+          <caret line="174" column="52" selection-start-line="174" selection-start-column="44" selection-end-line="174" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/SingerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SingerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/huayu.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/mplayer.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="474" column="31" selection-start-line="474" selection-start-column="27" selection-end-line="474" selection-end-column="31" />
+        <state relative-caret-position="304">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1368">
+          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/bangdan.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="135" column="67" selection-start-line="135" selection-start-column="71" selection-end-line="140" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/entity/Song.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="285">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1778#1779#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2205#2206#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="e#2467#2468#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/SongService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="188" column="24" lean-forward="true" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
+        <state relative-caret-position="95">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/service/SongServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4589#4590#0" expanded="true" />
+            <element signature="e#4641#4642#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/dao/SongMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hear/dao/SongMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="78" column="34" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJs/mplayer-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="272" column="44" selection-start-line="272" selection-start-column="44" selection-end-line="272" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="318" column="23" selection-start-line="318" selection-start-column="23" selection-end-line="318" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/singerhost/playerjs/mplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7730">
+          <caret line="714" column="18" selection-start-line="714" selection-start-column="11" selection-end-line="714" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SongControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="75" column="120" lean-forward="true" selection-start-line="75" selection-start-column="120" selection-end-line="75" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/hear.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="178" column="19" lean-forward="true" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="254" column="2" lean-forward="true" selection-start-line="254" selection-start-column="2" selection-end-line="254" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/SonglistControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="248" column="55" selection-start-line="248" selection-start-column="47" selection-end-line="248" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/songlist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="303" column="30" lean-forward="true" selection-start-line="303" selection-start-column="30" selection-end-line="303" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hear/control/UserControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="160" column="69" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/mainJsp/informationEditing.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="186" column="30" lean-forward="true" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

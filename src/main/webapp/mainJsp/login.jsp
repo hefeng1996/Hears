@@ -251,7 +251,7 @@ $("#forget").click(function () {
 window.open("<%=basePath%>personal.jsp");
 })
 $("#jump").click(function () {
-window.open("<%=basePath%>jsp/register.jsp");
+window.open("<%=basePath%>mainJsp/register.jsp");
 })
 })
 </script>

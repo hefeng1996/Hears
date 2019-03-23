@@ -44,6 +44,7 @@ public class SonglistControl {
         request.setAttribute("newSong",songService.newSong());
         request.setAttribute("mySong",songService.mySong());
 
+        request.setAttribute("myslist1",singerService.selectMySinger1());
         request.setAttribute("myslist2",singerService.selectMySinger2());
 
         request.setAttribute("newalbum",albumService.selectAlbum());
@@ -66,6 +67,7 @@ public class SonglistControl {
         List<Song> mySongs = songService.mySong();
         request.setAttribute("mySong", mySongs);
 //        System.out.println("sss:"+songService.mySong());
+        request.setAttribute("myslist1",singerService.selectMySinger1());
         request.setAttribute("myslist2",singerService.selectMySinger2());
 
         request.setAttribute("newalbum",albumService.selectAlbum());

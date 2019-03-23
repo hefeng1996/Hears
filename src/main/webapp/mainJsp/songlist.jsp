@@ -90,7 +90,7 @@
 </head>
 <body style="background-color: #f5f5f5">
 
-<div style=" background-color: white; border: 1px solid #cccccc;width: 980px; margin-left:190px; margin-right: 190px ;">
+<div style=" background-color: white; border: 1px solid #cccccc;width: 980px; margin:0 auto ;">
 
     <img style="float: left;margin: 40px;height: 200px; width: 200px"
             <c:if test="${not empty songlist.img}">

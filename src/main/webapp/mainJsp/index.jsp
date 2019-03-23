@@ -139,7 +139,7 @@
         </div>
         <div style="height: 2px; background-color: red;"></div>
         <div class="img1" id="tuijian1" style="margin-top: 20px;  width: 100%; height:180px;">
-            <c:forEach items="${showSonglist}" var="songlist" begin="0" end="9">
+            <c:forEach items="${showSonglist}" var="songlist" begin="0" end="5">
                 <a href="<%= basePath%>/songlist/songlist.action?id=${songlist.id}"style="float: left; color: black;"><img style="margin-left: 50px;"  src="<%= resourcesPath%>images/200songlist/${songlist.img}" /><p style="margin-left: 50px; width: 130px">${songlist.name}</p></a>
             </c:forEach>
         </div>
@@ -149,12 +149,12 @@
         <a href="<%=basePath%>artist/recommendsinger.action"><img style="float: right; margin-right: 20px; margin-top: 30px;" src="<%= basePath%>main/img/32.jpg" /></a>
         <div style="height: 2px; background-color: red;"></div>
         <div class="img1" id="tuijian1" style="margin-top: 20px;  width: 100%; height:180px;">
-            <c:forEach items="${myslist2}" var="singer" begin="0" end="9">
+            <c:forEach items="${myslist1}" var="singer" begin="0" end="9">
                 <a href="<%= basePath%>artist/singerhost.action?id=${singer.id}" style="float: left; color: black;"><img style="margin-left: 50px;"  src="<%= resourcesPath%>images/100singer/${singer.img}" /><p style="margin-left: 50px;">${singer.name}</p></a>
             </c:forEach>
         </div>
     </div>
-    <div id="tuijian" style="height: 560px;">
+    <div id="tuijian" style="height: 400px;">
         <a href="#"><img style="margin-left: 20px; margin-top: 30px;" src="<%= basePath%>main/img/34.jpg"/></a>
         <div style="height: 2px; background-color: red;"></div>
         <div class="box" id="clock" style="margin-left: 10px;margin-top: 20px; float: left;">
@@ -189,7 +189,7 @@
             </div>
         </div>
         <div class="img1" id="tuijian1" style="margin-top: 60px;  width: 100%; height:180px;">
-            <c:forEach items="${showSonglist}" var="songlist" begin="10" end="13">
+            <c:forEach items="${showSonglist}" var="songlist" begin="1" end="4">
                 <a href="<%= basePath%>/songlist/songlist.action?id=${songlist.id}" style="float: left; color: black;"><img style="margin-left: 50px;"  src="<%= resourcesPath%>images/200songlist/${songlist.img}" /><p style="margin-left: 50px; width: 130px">${songlist.name}</p></a>
             </c:forEach>
         </div>
