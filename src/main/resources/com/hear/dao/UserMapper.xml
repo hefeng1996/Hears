@@ -9,7 +9,7 @@
 
     <!--public boolean insertUser(User user);/*新用户注册*/-->
     <insert id="insertUser" parameterType="User">
-        insert INTO USER  (name,password,tel,registtime,sex,nicheng,birthday,province,city,img,isvip,vipdate,introduce) VALUES (#{name},#{password},#{tel},#{registtime},null ,null,null,null,null,null,null,null,null)
+        insert INTO USER  (name,password,tel,registtime,sex,nicheng,birthday,province,city,img,isvip,vipdate,introduce) VALUES (#{name},#{password},#{tel},#{registtime},null ,null,null,null,null,"21.jpg",null,null,null)
     </insert>
 
     <!--public boolean updateMessage(User user);/*修改用户信息*/-->

@@ -98,7 +98,7 @@
         .collect_form{
             position: relative;
             width: 100%;
-            min-height: 200px;
+            min-height: 450px;
         }
     </style>
 </head>

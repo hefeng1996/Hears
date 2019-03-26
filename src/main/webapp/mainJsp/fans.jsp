@@ -80,7 +80,7 @@
 </head>
 <body style="background-color: #FCFCFC">
 
-<div style="width: 1000px;height: auto;margin-left:180px;border: 1px solid #e0e0e0;background-color: white">
+<div style="width: 1000px;height: auto;margin:0 auto;border: 1px solid #e0e0e0;background-color: white">
     <div>
         <div id="change"  style="margin-left: 50px;margin-top: 50px;width: 200px;height: 200px;border:1px solid #b4b4b4" >
             <c:if test="${not empty user.img}">

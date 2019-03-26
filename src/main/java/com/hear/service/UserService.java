@@ -17,6 +17,7 @@ public interface UserService {
 
     public User selectUserById(int id);
 
+    boolean selectByUserName(String id);
 
 
 }

@@ -6,31 +6,31 @@ import java.util.List;
 
 
 public interface SingerMapper {
-    public List<Singer> selectSinger();
+    List<Singer> selectSinger();
 
-    public List<Singer> selectMySinger1();
+    List<Singer> selectMySinger1();
 
-    public List<Singer> selectMySinger2();
+    List<Singer> selectMySinger2();
 
-    public List<Singer> selectChMaleSinger();
+    List<Singer> selectChMaleSinger();
 
-    public List<Singer> selectChFemaleSinger();
+    List<Singer> selectChFemaleSinger();
 
-    public List<Singer> selectChBand();
+    List<Singer> selectChBand();
 
-    public List<Singer> selectEngMaleSinger();
+    List<Singer> selectEngMaleSinger();
 
-    public List<Singer> selectEngFemaleSinger();
+    List<Singer> selectEngFemaleSinger();
 
-    public List<Singer> selectEngBand();
+    List<Singer> selectEngBand();
 
-    public List<Singer> selectJkMaleSinger();
+    List<Singer> selectJkMaleSinger();
 
-    public List<Singer> selectJkFemaleSinger();
+    List<Singer> selectJkFemaleSinger();
 
-    public List<Singer> selectJkBand();
+    List<Singer> selectJkBand();
 
-    public Singer selectSingerhost(int id);
+    Singer selectSingerhost(int id);
 
-    public List<Singer> selectSimliarSinger(int id);
+    List<Singer> selectSimliarSinger(int id);
 }

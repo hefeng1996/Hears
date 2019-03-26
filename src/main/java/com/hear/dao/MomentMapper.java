@@ -8,22 +8,22 @@ import java.util.List;
 
 @Repository
 public interface MomentMapper {
-    public List<Moment> selectMomentsByUserId(int id);//G
-    public List<Moment> selectMyMomentsByMyId(int myId);//Y
-    public List<Moment> selectAllMomentsByMyId(int myId);//Y
-    public List<Comments> selectCommentsByMonentId(int mId);//Y
-    public boolean insertMoment(Moment moment);//Y
-    public boolean insertComment(Comments comments);//Y
-    public Comments selectUpperCommentByComentId(int cId);//Y
-    public boolean insertAnswer(Comments comments);//Y
+    List<Moment> selectMomentsByUserId(int id);//G
+    List<Moment> selectMyMomentsByMyId(int myId);//Y
+    List<Moment> selectAllMomentsByMyId(int myId);//Y
+    List<Comments> selectCommentsByMonentId(int mId);//Y
+    boolean insertMoment(Moment moment);//Y
+    boolean insertComment(Comments comments);//Y
+    Comments selectUpperCommentByComentId(int cId);//Y
+    boolean insertAnswer(Comments comments);//Y
 
 
     //    根据动态的id删除下面所有评论
-    public boolean deleteComentByMomentId(int cId);
+    boolean deleteComentByMomentId(int cId);
     //    根据动态的id删除动态
-    public boolean deleteMomentByMomentId(int mId);
+    boolean deleteMomentByMomentId(int mId);
     //    根据评论的id删除评论
-    public boolean deleteCommentByCommnetId(int cid);
+    boolean deleteCommentByCommnetId(int cid);
 
 
 }

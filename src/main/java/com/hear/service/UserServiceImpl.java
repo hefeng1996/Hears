@@ -64,6 +64,10 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectUserById(id);
     }
 
+    @Override
+    public boolean selectByUserName(String name) {
+        return userMapper.selectUserByName(name)==null?false:true;
+    }
 
 
 }

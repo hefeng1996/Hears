@@ -129,7 +129,7 @@
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><img src="<%= basePath%>main/pic/59.jpg"/><a href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td style="position: relative;">
                                     <span class="songtime"> ${song.time}</span>
 
@@ -153,7 +153,7 @@
                         <c:if test="${s.count>3}">
                             <tr style="height: 40px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img src="<%= basePath%>main/pic/59.jpg"/><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td style="position: relative;">
                                     <span class="songtime">${song.time}</span>
                                     <div class="songtimebg" id="songtimebg">
@@ -189,7 +189,7 @@
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><img src="<%= basePath%>main/pic/59.jpg"/><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td>
                                     <span class="songtime1">${song.time}</span>
                                     <div class="songtimebg1">
@@ -205,7 +205,7 @@
                         <c:if test="${s.count>3}">
                             <tr style="height: 40px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img src="<%= basePath%>main/pic/59.jpg"/><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td>
                                     <span class="songtime1">${song.time}</span>
                                     <div class="songtimebg1" id="songtimebg">
@@ -240,7 +240,8 @@
                         <c:if test="${s.count<4}">
                             <tr style="height: 60px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/><img src="<%= basePath%>main/pic/59.jpg"/><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><img style="width: 50px; height: 50px;" src="<%= resourcesPath%>images/200album/${song.album.img}"/>
+                                    <a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td>
                                     <span class="songtime2">${song.time}</span>
                                     <div class="songtimebg2" id="songtimebg">
@@ -256,7 +257,7 @@
                         <c:if test="${s.count>3}">
                             <tr style="height: 40px;">
                                 <td style="text-align: center;">${s.count}</td>
-                                <td style="width:100px"><img src="<%= basePath%>main/pic/59.jpg"/><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
+                                <td style="width:100px"><a href="javascript:parent.playSongid('${song.id}')"><img src="<%= basePath%>main/pic/59.jpg"/></a><a  href="<%=basePath%>song.action?id=${song.id}">${song.name}</a></td>
                                 <td>
                                     <span class="songtime2">${song.time}</span>
                                     <div class="songtimebg2" id="songtimebg">

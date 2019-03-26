@@ -7,9 +7,9 @@ import com.hear.entity.User;
 import java.util.List;
 
 public interface MySingerMapper {
-    public List<MySinger> selectMySingerByUserId(int id);
+    List<MySinger> selectMySingerByUserId(int id);
 //    收藏歌手
-    public boolean collectSinger(MySinger mySinger);
+    boolean collectSinger(MySinger mySinger);
 //    取消收藏歌手
-    public boolean cancelCollectSinger(MySinger mySinger);
+    boolean cancelCollectSinger(MySinger mySinger);
 }

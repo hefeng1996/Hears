@@ -94,7 +94,7 @@
 
 <body style="background-color: #FCFCFC">
 <div class="container">
-    <div style="width: 1000px;border: 1px solid #e0e0e0;background-color:white">
+    <div style="width: 1000px;border: 1px solid #e0e0e0;background-color:white;margin: 0 auto">
 
         <div>
            <div id="change"  style="margin-left: 50px;margin-top: 50px;width: 200px;height: 200px;border:1px solid #b4b4b4" >
@@ -109,10 +109,10 @@
             <div style="width: 650px;height: 200px;float: right;position: absolute;margin-top: -200px;margin-left: 300px">
 
                 <div style="width: 200px;height: 50px;line-height: 50px;font-size: 28px">
-                    <c:if test="${not empty user.nicheng}">
-                        <span style="color: #000000">${user.nicheng}</span>
+                    <c:if test="${not empty user.name}">
+                        <span style="color: #000000">${user.name}</span>
                     </c:if>
-                    <c:if test="${empty user.nicheng}">
+                    <c:if test="${empty user.name}">
                         <span style="color: #000000">${user.name}</span>
                     </c:if>
                     <c:if test="${user.sex=='1'}">

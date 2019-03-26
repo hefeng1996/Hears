@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public interface PraiseMapper {
-   public List<Praise> getPraise(Integer mid);
-   public boolean insertPraise(Praise praise);
-   public boolean deletePraise(Integer pid);
+   List<Praise> getPraise(Integer mid);
+   boolean insertPraise(Praise praise);
+   boolean deletePraise(Integer pid);
 }

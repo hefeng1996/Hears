@@ -199,7 +199,7 @@
 </head>
 <body style="background-color: #FCFCFC">
 <div class="container">
-    <div style="width: 1000px;border: 1px solid #e0e0e0;background-color:white">  <%--margin-left:180px;--%>
+    <div style="width: 1000px;border: 1px solid #e0e0e0;background-color:white;margin:0 auto">  <%--margin-left:180px;--%>
 
         <div>
             <div id="change"  style="margin-left: 50px;margin-top: 50px;width: 200px;height: 200px;border:1px solid #b4b4b4" >
@@ -279,7 +279,7 @@
             </div>
 
 
-            <a  href="<%=basePath%>mianJsp/informationEditing.jsp">
+            <a  href="<%=basePath%>mainJsp/informationEditing.jsp">
                 <div id="changeimg" class="changeimg">
                     <span id="font" class="font">更换头像</span>
                 </div>
