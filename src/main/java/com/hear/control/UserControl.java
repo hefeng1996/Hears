@@ -221,7 +221,8 @@ public class UserControl {
             session.removeAttribute("user");
             session.setAttribute("user",user);
             try {
-                response.sendRedirect(request.getContextPath()+"/user/personalInformation.action");
+//                response.sendRedirect(request.getContextPath()+"/user/personalInformation.action");
+                response.sendRedirect(request.getContextPath()+"/?flag=2");
             } catch (IOException e) {
                 e.printStackTrace();
             }

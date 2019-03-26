@@ -420,6 +420,10 @@ var MPlayer = (function () {
 				} else if (song < 0) {
 					song = 0;
 				}
+				//
+				// $.ajax({
+				//
+				// });
 				$this._setInfo(list,song);
 				$this.play();
 			}

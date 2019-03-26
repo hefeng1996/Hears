@@ -199,20 +199,20 @@
                     <%--</div>--%>
 
                     <%--从数据库查出的 推荐歌手-->热门歌手 列表--%>
-                    <div class="imgcontain2">
-                        <%--不明原因左侧留白 加行内元素div修复此问题--%>
-                        <%--<div class="fix"></div>--%>
+                    <%--<div class="imgcontain2">--%>
+                        <%--&lt;%&ndash;不明原因左侧留白 加行内元素div修复此问题&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<div class="fix"></div>&ndash;%&gt;--%>
 
-                        <c:forEach items="${recommendslist}" var="singer">
-                            <div class="imgs2">
-                                <div class="idiv">
-                                <a href="<%= basePath%>artist/singerhost.action?id=${singer.id}"><img class="singerimg" src='<%= imgPath%>images/100singer/${singer.img}'/></a>
-                                </div>
-                                <a href="<%= basePath%>artist/singerhost.action?id=${singer.id}" class="singername">${singer.name}</a>
-                            </div>
-                        </c:forEach>
+                        <%--<c:forEach items="${recommendslist}" var="singer">--%>
+                            <%--<div class="imgs2">--%>
+                                <%--<div class="idiv">--%>
+                                <%--<a href="<%= basePath%>artist/singerhost.action?id=${singer.id}"><img class="singerimg" src='<%= imgPath%>images/100singer/${singer.img}'/></a>--%>
+                                <%--</div>--%>
+                                <%--<a href="<%= basePath%>artist/singerhost.action?id=${singer.id}" class="singername">${singer.name}</a>--%>
+                            <%--</div>--%>
+                        <%--</c:forEach>--%>
 
-                    </div>
+                    <%--</div>--%>
 
                 </div>
             </div>

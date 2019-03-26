@@ -42,6 +42,7 @@
         <id column="id" property="id" />
         <result column="songname" property="name" />
         <result column="url" property="url" />
+        <result column="duration" property="duration"/>
         <result column="lrc" property="lyrics"/>
         <association property="album" javaType="Album">
             <result property="img" column="aimg"/>
@@ -53,7 +54,7 @@
 
     <!-- public Song selectSongById(int id);-->
     <select id="selectSongById" parameterType="int" resultMap="GetSongInfoMap">
-        SELECT so.id as id,so.name as songname,so.url as url,so.lyrics as lrc,s.name as name,a.img as aimg from Song as so,Singer as s,Album as a
+        SELECT so.id as id,so.name as songname,so.url as url,so.lyrics as lrc,s.name as name,a.img as aimg ,so.duration as duration from Song as so,Singer as s,Album as a
         where s.id=so.singer_id and so.album_id = a.id and so.id=#{_parameter}
     </select>
     <resultMap id="getSongInfoMap" type="Song">

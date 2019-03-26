@@ -31,12 +31,12 @@
 
     <!--public List<Singer> selectMySinger1();-->
     <select id="selectMySinger1" resultType="Singer">
-        select id,img,name from singer limit 9,10
+        select id,img,name from singer limit 0,10
     </select>
 
     <!--public List<Singer> selectMySinger2();-->
     <select id="selectMySinger2" resultType="Singer">
-        select id,img,name from singer limit 9,20
+        select id,img,name from singer limit 0,20
     </select>
     <!--public List<Singer> selectChMaleSinger();-->
     <select id="selectChMaleSinger" resultType="Singer">
