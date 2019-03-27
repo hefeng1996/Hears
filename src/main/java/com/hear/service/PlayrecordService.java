@@ -13,4 +13,6 @@ public interface PlayrecordService {
     public List<Playrecord> selectPlayreCordAll(int id);
 
     public int selectPlayreCordCount(int id);
+
+    boolean insertPlayreCordCount(Playrecord playrecord);
 }

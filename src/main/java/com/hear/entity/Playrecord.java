@@ -9,7 +9,7 @@ public class Playrecord {
 
     private Song song;
 
-    private Date playtime;
+    private Long playtime;
 
     public Integer getId() {
         return id;
@@ -35,11 +35,11 @@ public class Playrecord {
         this.song = song;
     }
 
-    public Date getPlaytime() {
+    public Long getPlaytime() {
         return playtime;
     }
 
-    public void setPlaytime(Date playtime) {
+    public void setPlaytime(Long playtime) {
         this.playtime = playtime;
     }
 }

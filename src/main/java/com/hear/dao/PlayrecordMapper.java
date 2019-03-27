@@ -10,4 +10,6 @@ public interface PlayrecordMapper {
     List<Playrecord> selectPlayreCordAll(int id);
 
     int selectPlayreCordCount(int id);
+
+    boolean insertPlayreCord(Playrecord playrecord);
 }

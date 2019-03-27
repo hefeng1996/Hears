@@ -31,5 +31,10 @@ public class PlayrecordServiceImpl implements PlayrecordService {
         return playrecordMapper.selectPlayreCordCount(id);
     }
 
+    @Override
+    public boolean insertPlayreCordCount(Playrecord playrecord) {
+        return playrecordMapper.insertPlayreCord(playrecord);
+    }
+
 
 }

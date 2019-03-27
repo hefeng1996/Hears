@@ -31,6 +31,9 @@ public class SongControl {
     @Autowired
     private SongCommentService songCommentService;
 
+    @Autowired
+    private PlayrecordService playrecordService;
+
     @RequestMapping(value="songplay.action",produces = "text/plain;charset=utf-8")
     public  @ResponseBody String  selectSonginfo(int id,HttpServletRequest request, HttpServletResponse response){
 
@@ -42,6 +45,10 @@ public class SongControl {
             songInfo.setTime();
             songInfo.setLyrics(s);
             JSONObject ja = JSONObject.fromObject(songInfo);
+
+
+
+
             return ja.toString();
     }
 
