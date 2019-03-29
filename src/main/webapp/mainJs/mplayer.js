@@ -1,3 +1,23 @@
+var jsbasePath=function getRealPath(){
+	var curWwwPath=window.document.location.href;
+	var pathName=window.document.location.pathname;
+	var pos=curWwwPath.indexOf(pathName);
+	var localhostPaht=curWwwPath.substring(0,pos);
+	var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+	var realPath=localhostPaht+projectName;
+	// alert(realPath);
+	return realPath;
+}
+var hearPath=function getHearPath() {
+	var curWwwPath = window.document.location.href;
+	var pathName = window.document.location.pathname;
+	var pos = curWwwPath.indexOf(pathName);
+	var localhostPaht = curWwwPath.substring(0, pos);
+	var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+	var hearPath = localhostPaht + "/hearupload";
+	// alert(hearPath);
+	return hearPath;
+}
 var MPlayer = (function () {
 	function MPlayer(settings,callback) {
 		var $this = this;
@@ -420,10 +440,14 @@ var MPlayer = (function () {
 				} else if (song < 0) {
 					song = 0;
 				}
-				//
-				// $.ajax({
-				//
-				// });
+				$.ajax({
+					type:"get",
+					url:jsbasePath()+"",
+					date:"name?"+mplayer_song[song.name],
+					success:function(){
+
+					}
+				});
 				$this._setInfo(list,song);
 				$this.play();
 			}
