@@ -26,7 +26,17 @@ var jsbasePath=function getRealPath(){
     var realPath=localhostPaht+projectName;
     // alert(realPath);
     return realPath;
-}
+};
+var jsbasePathBase=function getRealPath(){
+    var curWwwPath=window.document.location.href;
+    var pathName=window.document.location.pathname;
+    var pos=curWwwPath.indexOf(pathName);
+    var localhostPaht=curWwwPath.substring(0,pos);
+    // var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+    var realPath=localhostPaht;
+    // alert(realPath);
+    return realPath;
+};
 var hearPath=function getHearPath() {
     var curWwwPath = window.document.location.href;
     var pathName = window.document.location.pathname;
@@ -36,7 +46,7 @@ var hearPath=function getHearPath() {
     var hearPath = localhostPaht + "/hearupload";
     // alert(hearPath);
     return hearPath;
-}
+};
 var mplayer_song = [[
     {
         "basic":true,

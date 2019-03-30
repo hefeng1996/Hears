@@ -39,4 +39,7 @@ SELECT DISTINCT album_id FROM song WHERE singer_id=#{_paramter})
     <select id="selectAlbumBySingerId" resultType="Album" parameterType="int">
         SELECT * FROM Album WHERE singer_id=#{_paramter}
     </select>
+    <select id="selectAlbumBySongId" resultType="com.hear.entity.Album">
+
+    </select>
 </mapper>

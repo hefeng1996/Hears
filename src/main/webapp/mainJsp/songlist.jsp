@@ -202,7 +202,7 @@
                                         <form id="collect_form" class="collect_form" action="<%=basePath%>songlist/colsonglist1.action" method="post" enctype="multipart/form-data">
                                             <ul class="collect_ul" style="min-height: 56px;">
                                                 <c:forEach items="${songlists}" var="songlists">
-                                                    <li style="margin-left:-160px;width: 460px;" class="collect_li" onclick="jingjing()">
+                                                    <li style="margin-left:-160px;width: 460px;" class="collect_li" onclick="jingjing(${songlists.id})">
                                                         <div class="collect_li_div" style="width: 100%;">
                                                             <a class="collect_li_div_left" href="#">
                                                                 <c:if test="${not empty songlists.img}">
@@ -478,7 +478,8 @@ function collectSong(sid,singerid) {
     </c:if>
 }
 //    收藏歌曲提交
-function jingjing() {
+function jingjing(id) {
+    document.getElementById("colsonglistid").value=id;
     document.getElementById("collect_form").submit();
 }
 //    收藏歌单所有歌曲

@@ -84,9 +84,9 @@
                     <span>
                         <a href="javascript:void(0)" id="MainImg"><img style="border-radius: 40px;width: 40px;height: 40px;top: 20px;display: inline;position: relative;" src="<%= resourcesPath%>head/${sessionScope.user.img}" ></a>
                     </span>
-                    <span style="width: 20px"></span>
+                    <span style="width: 20px;"></span>
                     <span class="menu__item">
-                        <a id="MainLogout" class="menu__link" href="javascript:void(0);"><span style="top: -35px;display: inline;position: relative;">退出</span></a>
+                        <a id="MainLogout" class="menu__link" href="javascript:void(0);" style="min-width: 80px;margin-left: 20px;"><span style="top: -35px;display: inline;position: relative;">退出</span></a>
                     </span>
 
                 </c:if>
