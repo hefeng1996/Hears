@@ -4,7 +4,7 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+ path + "/";
     String resourcesPath=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/hearupload/";
 
 %>
@@ -326,7 +326,7 @@
             <%--评论开始--%>
             <c:forEach var="c" items="${comments}">
                 <div id="dc${c.id}" onmouseover="showdelete(${c.id})" onmouseout="hiddendelete(${c.id})">
-                    <hr style="border:0.5px solid #ccc;;margin-top: 2px"></hr>
+                    <hr style="border:0.5px solid #ccc;;margin-top: 2px"/>
                     <a href="<%=basePath%>/user/personalInformation.action?id=${c.user2.id}">
                         <c:if test="${empty c.user2.img}">
                             <img style="width: 50px;height: 50px" src="<%=basePath%>images/headimg.jpg">
@@ -372,7 +372,7 @@
                 </div>
 
             </c:forEach>
-            <hr style="border:1px dotted #ccc;;margin-top: 2px"></hr>
+            <hr style="border:1px dotted #ccc;;margin-top: 2px"/>
 
 
         </div>
@@ -429,16 +429,17 @@ function collectedSonglist(songlistid){
     alert("请先登录");
     </c:if>
     <c:if test="${not empty sessionScope.user}">
-
-    if($("#simg").attr("src")==(jsbasePath()+"/main/img/xing.jpg")){
+    // alert(jsbasePathBase()+"/main/img/xing.jpg");
+    if($("#simg").attr("src")==(jsbasePathBase()+"/main/img/xing.jpg")){
         $.ajax(
             {
                 type: "post",
-                url: jsbasePath()+"/songlist/savesonglist.action",
+                // url: jsbasePath()+"/songlist/savesonglist.action",
+                url: jsbasePath()+"/savesonglist.action",
                 data: "uid=" + ${sessionScope.user.id} + "&songlistid=" + songlistid,
                 success:function (data) {
                     if(data==1){
-                        $("#simg").attr("src", jsbasePath()+"/main/img/xing1.jpg");
+                        $("#simg").attr("src", jsbasePathBase()+"/main/img/xing1.jpg");
                     }
                 }
             }
@@ -447,11 +448,12 @@ function collectedSonglist(songlistid){
         $.ajax(
             {
                 type: "post",
-                url: jsbasePath()+"/songlist/cancelSave.action",
+                // url: jsbasePath()+"/songlist/cancelSave.action",
+                url: jsbasePath()+"/cancelSave.action",
                 data: "uid=" + ${sessionScope.user.id} + "&songlistid=" + songlistid,
                 success:function (data) {
                     if(data==1){
-                        $("#simg").attr("src", jsbasePath()+"/main/img/xing.jpg");
+                        $("#simg").attr("src", jsbasePathBase()+"/main/img/xing.jpg");
                     }
                 }
             }

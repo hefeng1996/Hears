@@ -288,11 +288,22 @@ public class UserControl {
         }
 
         List<Playrecord> playrecord5=playrecordService.selectPlayreCord5(userid);
+        for(Playrecord playrecord : playrecord5){
+            playrecord.setUser(u);
+        }
         List<Playrecord> playrecord20=playrecordService.selectPlayreCord20(userid);
+        for(Playrecord playrecord : playrecord20){
+            playrecord.setUser(u);
+        }
         int playcount=playrecordService.selectPlayreCordCount(userid);
         List<Songlist> songlists=songlistService.selectSonglistByUserId(userid);
+        for(Songlist songlist:songlists){
+            songlist.setUser(u);
+        }
         List<Songlist> songlikelists=songlistService.selectSonglistlikeByUserId(userid);
-
+        for(Songlist songlist:songlikelists){
+            songlist.setUser(u);
+        }
         request.setAttribute("user",user);
         request.setAttribute("id",id);
         request.setAttribute("songlikelists",songlikelists);
@@ -349,7 +360,7 @@ public class UserControl {
         System.out.println(playrecordsAll.size());
         request.setAttribute("playrecordsAll",playrecordsAll);
         try {
-            request.getRequestDispatcher("/jsp/listofsongs.jsp").forward(request,response);
+            request.getRequestDispatcher("/mainJsp/listofsongs.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

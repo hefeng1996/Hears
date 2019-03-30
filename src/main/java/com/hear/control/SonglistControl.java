@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -419,7 +420,7 @@ public class SonglistControl {
     }
     //收藏歌单
     @RequestMapping(value = "savesonglist.action")
-    public void saveSonglist(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public @ResponseBody void  saveSonglist(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String uid=request.getParameter("uid");
         String songlistid=request.getParameter("songlistid");
         Integer userid=Integer.parseInt(uid);

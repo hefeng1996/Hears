@@ -2,6 +2,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%--<jsp:useBean id="dateValue" class="java.util.Date"/>--%>
+<%--<jsp:setProperty name="dateValue" property="time" value="${item.create_at}"/>--%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -200,7 +202,11 @@
                             <td style="width: 400px"><span style="font-size: 14px;font-weight: bolder"><a href="<%=basePath%>/song.action?id=${record5.song.id}">${record5.song.name}</a></span>&nbsp;-&nbsp;<span style="font-size: 12px;color:rgba(46,46,46,0.6)"><a href="<%=basePath%>/artist/singerhost.action?id=${record5.song.singer.id}">${record5.song.singer.name}</a></span> </td>
                             <td style="width: 120px;font-size: 12px"><fmt:formatNumber type="number" value="${record5.song.duration/60}" maxFractionDigits="0"/>:${record5.song.duration%60}</td>
                             <td style="width: 190px"><%--<img src="<%=basePath%>images/plus01.png">&nbsp;&nbsp;<img src="<%=basePath%>images/collection.png">&nbsp;&nbsp;<img src="<%=basePath%>images/share01.png">&nbsp;&nbsp;--%><a href="<%= resourcesPath%>song/${record5.song.url}" download="${record5.song.name}"><img src="<%=basePath%>images/download01.png"></a> </td>
-                            <td style="width: 200px"><fmt:formatDate value="${record5.playtime}" type="both"/></td>
+                            <jsp:useBean id="dateValue" class="java.util.Date"/>
+                            <jsp:setProperty name="dateValue" property="time" value="${record5.playtime}"/>
+                            <td style="width: 200px"><fmt:formatDate value="${dateValue}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+                            <%--<td style="width: 200px"><fmt:formatDate value="${record5.playtime}" type="both"/></td>--%>
+
                         </tr>
                     </c:forEach>
                     </table>
@@ -213,7 +219,10 @@
                                 <td style="width: 400px"><span style="font-size: 14px;font-weight: bolder"><a href="<%=basePath%>/song.action?id=${record20.song.id}">${record20.song.name}</a></span>&nbsp;-&nbsp;<span style="font-size: 12px;color:rgba(46,46,46,0.6)"><a href="<%=basePath%>/artist/singerhost.action?id=${record20.song.singer.id}">${record20.song.singer.name}</a></span> </td>
                                 <td style="width: 120px;font-size: 12px"><fmt:formatNumber type="number" value="${record20.song.duration/60}" maxFractionDigits="0"/>:${record20.song.duration%60}</td>
                                 <td style="width: 190px"><%--<img src="<%=basePath%>images/plus01.png">&nbsp;&nbsp;<img src="<%=basePath%>images/collection.png">&nbsp;&nbsp;<img src="<%=basePath%>images/share01.png">&nbsp;&nbsp;--%><a href="<%= resourcesPath%>song/${record20.song.url}" download="${record20.song.name}"><img src="<%=basePath%>images/download01.png"> </a></td>
-                                <td style="width: 200px"><fmt:formatDate value="${record20.playtime}" type="both"/></td>
+                                <%--<td style="width: 200px"><fmt:formatDate value="${record20.playtime}" type="both"/></td>--%>
+                                <jsp:useBean id="dateValue1" class="java.util.Date"/>
+                                <jsp:setProperty name="dateValue1" property="time" value="${record20.playtime}"/>
+                                <td style="width: 200px"><fmt:formatDate value="${dateValue1}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
                             </tr>
                         </c:forEach>
                     </table>
