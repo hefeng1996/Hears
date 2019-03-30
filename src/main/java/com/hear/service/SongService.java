@@ -20,4 +20,6 @@ public interface SongService {
     public List<Song> hotSong();//热歌榜
     public List<Song> mySong();//原创榜
 
+    List<Song> selectSongByName(String name);
+
 }

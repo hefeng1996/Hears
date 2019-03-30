@@ -2,6 +2,8 @@ package com.hear.service;
 
 import com.hear.dao.PlayrecordMapper;
 import com.hear.entity.Playrecord;
+import com.hear.entity.Song;
+import com.hear.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +35,14 @@ public class PlayrecordServiceImpl implements PlayrecordService {
 
     @Override
     public boolean insertPlayreCordCount(Playrecord playrecord) {
-        return playrecordMapper.insertPlayreCord(playrecord);
+        Song song = playrecord.getSong();
+        User user = playrecord.getUser();
+        Integer userId = null;
+        Integer songId = song.getId();
+        if(user!=null){
+            userId = user.getId();
+        }
+        return playrecordMapper.insertPlayreCord(userId,songId,System.currentTimeMillis());
     }
 
 

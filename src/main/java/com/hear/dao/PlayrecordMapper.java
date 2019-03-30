@@ -11,5 +11,5 @@ public interface PlayrecordMapper {
 
     int selectPlayreCordCount(int id);
 
-    boolean insertPlayreCord(Playrecord playrecord);
+    boolean insertPlayreCord(Integer userId,Integer songId,Long time);
 }

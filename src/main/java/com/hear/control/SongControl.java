@@ -34,6 +34,29 @@ public class SongControl {
     @Autowired
     private PlayrecordService playrecordService;
 
+    @RequestMapping(value = "insertPlay.action")
+    public @ResponseBody boolean insertPlay(String name,HttpSession session,HttpServletRequest request, HttpServletResponse response){
+//        playrecordService.selectplayreCordByName();
+        List<Song> songs = songService.selectSongByName(name);
+
+        Playrecord playrecord=new Playrecord();
+        if(session.getAttribute("user")==null){
+            playrecord.setSong(songs.get(0));
+            return playrecordService.insertPlayreCordCount(playrecord);
+        }
+        User user= (User) session.getAttribute("user");
+//        Integer id = user.getId();
+//        List<Song> songs = songService.selectSongByName(name);
+        if(songs!=null&&songs.size()!=0){
+
+            playrecord.setUser(user);
+            playrecord.setSong(songs.get(0));
+            return playrecordService.insertPlayreCordCount(playrecord);
+        }
+        return false;
+
+    }
+
     @RequestMapping(value="songplay.action",produces = "text/plain;charset=utf-8")
     public  @ResponseBody String  selectSonginfo(int id,HttpServletRequest request, HttpServletResponse response){
 

@@ -19,8 +19,11 @@
         <collection property="song" javaType="Song" resultMap="getSongMap"></collection>
     </resultMap>
     <insert id="insertPlayreCord">
-        INSERT INTO playrecord(`user_id`, `song_id`, `playtime`) VALUES (user, song, playtime);
+        insert into playrecord(`user_id`, `song_id`, `playtime`) VALUES (#{param1},#{param2},#{param3})
     </insert>
+    <!--    <insert id="insertPlayreCord">
+            INSERT INTO playrecord(`user_id`, `song_id`, `playtime`) VALUES (user, song, playtime);
+        </insert>-->
     <!--public List<Playrecord> selectPlayreCord5(int id);-->
     <select id="selectPlayreCord5" resultMap="getPlayrecordMap" parameterType="int">
         SELECT p.ID as pid,p.playtime ,s.ID as sid,s.name,s.url,s.duration,sin.ID as singerid,sin.name AS sinname FROM playrecord p ,song s,singer sin WHERE p.song_id=s.ID and s.singer_id=sin.ID and user_id=#{_paramter} order by  playtime desc LIMIT 0,5

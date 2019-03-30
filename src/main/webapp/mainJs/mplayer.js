@@ -440,10 +440,11 @@ var MPlayer = (function () {
 				} else if (song < 0) {
 					song = 0;
 				}
+				var info = this.getInfo(list,song);
 				$.ajax({
 					type:"get",
-					url:jsbasePath()+"",
-					date:"name?"+mplayer_song[song.name],
+					url:jsbasePath()+"/insertPlay.action?name="+info.name,
+					// date:"name="+[song.name],
 					success:function(){
 
 					}

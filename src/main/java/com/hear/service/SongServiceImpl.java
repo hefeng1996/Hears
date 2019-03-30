@@ -154,5 +154,10 @@ public class SongServiceImpl implements SongService {
         return songMapper.mySong();
     }
 
+    @Override
+    public List<Song> selectSongByName(String name) {
+        return songMapper.selectSongByName(name);
+    }
+
 
 }

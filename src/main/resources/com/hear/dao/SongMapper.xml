@@ -120,4 +120,8 @@
         from song as s,album as a,singer as i
         where s.singer_id = i.id and s.album_id=a.id and s.id=#{_parameter}
     </select>
+    <!--<select id="selectSongByName" resultType="com.hear.entity.Song"></select>-->
+    <select id="selectSongByName" resultType="com.hear.entity.Song" parameterType="string">
+        select * from song where `name` = #{_parameter}
+    </select>
 </mapper>
